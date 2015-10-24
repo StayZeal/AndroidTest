@@ -24,5 +24,10 @@
     <string name="title_activity_scroll_grid">ScrollGridActivity</string>
     <string name="title_activity_list_view">ListViewActivity</string>
     <string name="title_activity_video_view">VideoViewActivity</string>
+    <string name="title_activity_usb_connect">UsbConnectActivity</string>
+    <string name="title_activity_jia_mi">JiaMiActivity</string>
+    <string name="title_activity_volley">VolleyActivity</string>
+    <string name="title_activity_break_download">BreakDownloadActivity</string>
+    <string name="title_activity_intent_test">IntentTestActivity</string>
 
 </resources>

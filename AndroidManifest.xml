@@ -11,9 +11,9 @@
     <uses-permission android:name="android.Manifest.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.Manifest.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -112,6 +112,25 @@
             android:name=".VideoViewActivity"
             android:label="@string/title_activity_video_view" >
         </activity>
+        <activity
+            android:name=".UsbConnectActivity"
+            android:label="@string/title_activity_usb_connect" >
+        </activity>
+        <activity
+            android:name=".RSAEncryptActivity"
+            android:label="@string/title_activity_jia_mi" >
+        </activity>
+        <activity
+            android:name=".VolleyActivity"
+            android:label="@string/title_activity_volley" >
+        </activity>
+        <activity
+            android:name=".BreakDownloadActivity"
+            android:label="@string/title_activity_break_download" >
+        </activity>
+        <activity
+            android:name=".IntentTestActivity"
+            android:label="@string/title_activity_intent_test" >
+        </activity>
     </application>
-
 </manifest>

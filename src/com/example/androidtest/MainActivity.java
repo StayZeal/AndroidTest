@@ -9,6 +9,7 @@ import com.example.androidtest.intent.IntentActivity1;
 import com.example.androidtest.locate.GpsActivity;
 import com.example.androidtest.material.MaterialActivity;
 import com.example.androidtest.storage.SharePreferenceActivity;
+import com.example.listview.ListViewActivity;
 import com.example.listview.RefreshListViewActivity;
 import com.example.viewpager.BackGroundColorAnimationActivity;
 
@@ -16,6 +17,7 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -37,6 +39,7 @@ public class MainActivity extends ListActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		titleList = new String[]{
 				"Zaker风格欢迎界面测试",
 				"ViewPager全屏背景渐变",
@@ -52,6 +55,11 @@ public class MainActivity extends ListActivity {
 				"屏幕适配",
 				"GPS",
 				"VideoView",
+				"QQ聊天跳转",
+				"RSA加密",
+				"Volley Https",
+				"Intent使用",
+				"listViewbtn和text点击事件",
 				"全屏测试"
 		};
 		/*testList = new ArrayList<String>();
@@ -132,6 +140,21 @@ public class MainActivity extends ListActivity {
 			break;
 		case 13:
 			startActivity(new Intent(this,VideoViewActivity.class));
+			break;
+		case 14:
+			String url11 = "mqqwpa://im/chat?chat_type=wpa&uin=543244&version=1";  
+	        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url11))); 
+		case 15:
+			startActivity(new Intent(this,RSAEncryptActivity.class));
+			break;
+		case 16:
+			startActivity(new Intent(this,VolleyActivity.class));
+			break;
+		case 17:
+			startActivity(new Intent(this,IntentTestActivity.class));
+			break;
+		case 18:
+			startActivity(new Intent(this,ListViewActivity.class));
 			break;
 		default:
 			break;
