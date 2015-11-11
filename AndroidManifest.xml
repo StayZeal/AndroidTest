@@ -13,6 +13,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
 
     <application
         android:allowBackup="true"
@@ -132,5 +134,14 @@
             android:name=".IntentTestActivity"
             android:label="@string/title_activity_intent_test" >
         </activity>
+        <activity
+            android:name=".GetSDPathActivity"
+            android:label="@string/title_activity_get_sdpath" >
+        </activity>
+        <activity
+            android:name=".GetPhoneHeapSizeActivity"
+            android:label="@string/title_activity_get_phone_heap_size" >
+        </activity>
     </application>
+
 </manifest>

@@ -29,5 +29,7 @@
     <string name="title_activity_volley">VolleyActivity</string>
     <string name="title_activity_break_download">BreakDownloadActivity</string>
     <string name="title_activity_intent_test">IntentTestActivity</string>
+    <string name="title_activity_get_sdpath">GetSDPathActivity</string>
+    <string name="title_activity_get_phone_heap_size">GetPhoneHeapSizeActivity</string>
 
 </resources>

@@ -3,7 +3,6 @@ package com.example.listview;
 import com.example.androidtest.R;
 
 import android.content.Context;
-import android.media.Image;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;

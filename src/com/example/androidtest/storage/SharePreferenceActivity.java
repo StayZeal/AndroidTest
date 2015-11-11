@@ -3,9 +3,7 @@ package com.example.androidtest.storage;
 import com.example.androidtest.R;
 import com.example.androidtest.R.id;
 import com.example.androidtest.R.layout;
-import com.example.androidtest.R.menu;
 
-import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
