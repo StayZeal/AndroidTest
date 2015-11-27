@@ -1,5 +1,6 @@
 package com.example.androidtest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.example.androidtest.charge.ChargeActivity;
@@ -16,6 +17,7 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.database.MergeCursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,25 +32,44 @@ public class MainActivity extends ListActivity {
 	private Animation animation;
 	private Context context;
 	private Activity acticity;
-	private List<String> testList;
-	private String[] titleList;
+//	private List<String> testList;
+	private List<String> titleList;
 	private ArrayAdapter<String> arrayAdapter;
+
+	private static final DemoInfo[] demo = {
+			new DemoInfo("Zaker风格欢迎界面测试", TestZakerActivity.class),
+			new DemoInfo("ViewPager全屏背景渐变",
+					BackGroundColorAnimationActivity.class),
+			new DemoInfo("Image透明", ImageTranspaencyActivity.class),
+			new DemoInfo("ImageView像素测试", ImagePixelActivity.class),
+			new DemoInfo("startActivityForResult",
+					StartForResultActivity_A.class),
+			new DemoInfo("下拉刷新ListView", RefreshListViewActivity.class),
+			new DemoInfo("SharePreference", SharePreferenceActivity.class),
+			new DemoInfo("Intent", IntentActivity1.class),
+			new DemoInfo("Material", MaterialActivity.class),
+			new DemoInfo("Charge", ChargeActivity.class),
+			new DemoInfo("屏幕适配", DisplayActivity.class),
+			new DemoInfo("GPS", GpsActivity.class),
+			new DemoInfo("VideoView", VideoViewActivity.class),
+			new DemoInfo("QQ聊天跳转", null),
+			new DemoInfo("RSA加密", RSAEncryptActivity.class),
+			new DemoInfo("Volley Https", VolleyActivity.class),
+			new DemoInfo("Intent使用", IntentTestActivity.class),
+			new DemoInfo("listViewbtn和text点击事件", ListViewActivity.class),
+			new DemoInfo("SD路径适配", GetSDPathActivity.class),
+			new DemoInfo("显示手机堆大小", GetPhoneHeapSizeActivity.class)};
 
 	@SuppressWarnings("unchecked")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		titleList = new String[] { "Zaker风格欢迎界面测试", "ViewPager全屏背景渐变",
-				"Gallery测试", "Image透明", "ImageView像素测试",
-				"startActivityForResult", "下拉刷新ListView", "SharePreference",
-				"Intent", "Material", "Charge", "屏幕适配", "GPS", "VideoView",
-				"QQ聊天跳转", "RSA加密", "Volley Https", "Intent使用",
-				"listViewbtn和text点击事件", "SD路径适配", 
-				"显示手机堆大小","全屏测试" };
-		/*
-		 * testList = new ArrayList<String>(); testList.add("全屏测试");
-		 */
+		titleList = new ArrayList<String>();
+
+		for (int i = 0; i < demo.length; i++) {
+			titleList.add(demo[i].title);
+		}
 
 		arrayAdapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, titleList);
@@ -87,77 +108,30 @@ public class MainActivity extends ListActivity {
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 
-		Log.i(TAG, "onListItemClick-->执行");
-		switch (position) {
-		case 0:
-			startActivity(new Intent().setClass(MainActivity.this,
-					TestZakerActivity.class));
-			break;
-		case 1:
-			startActivity(new Intent().setClass(MainActivity.this,
-					BackGroundColorAnimationActivity.class));
-			break;
-		case 2:
-			break;
-		case 3:
-			startActivity(new Intent().setClass(MainActivity.this,
-					ImageTranspaencyActivity.class));
-			break;
-		case 4:
-			startActivity(new Intent(MainActivity.this,
-					ImagePixelActivity.class));
-
-			break;
-		case 5:
-			startActivity(new Intent(this, StartForResultActivity_A.class));
-			break;
-		case 6:
-			startActivity(new Intent(this, RefreshListViewActivity.class));
-			break;
-		case 7:
-			startActivity(new Intent(this, SharePreferenceActivity.class));
-			break;
-		case 8:
-			startActivity(new Intent(this, IntentActivity1.class));
-			break;
-		case 9:
-			startActivity(new Intent(this, MaterialActivity.class));
-			break;
-		case 10:
-			startActivity(new Intent(this, ChargeActivity.class));
-			break;
-		case 11:
-			startActivity(new Intent(this, DisplayActivity.class));
-			break;
-		case 12:
-			startActivity(new Intent(this, GpsActivity.class));
-			break;
-		case 13:
-			startActivity(new Intent(this, VideoViewActivity.class));
-			break;
-		case 14:
+		if (demo[position].title.equals("QQ聊天跳转")) {
 			String url11 = "mqqwpa://im/chat?chat_type=wpa&uin=543244&version=1";
 			startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url11)));
-		case 15:
-			startActivity(new Intent(this, RSAEncryptActivity.class));
-			break;
-		case 16:
-			startActivity(new Intent(this, VolleyActivity.class));
-			break;
-		case 17:
-			startActivity(new Intent(this, IntentTestActivity.class));
-			break;
-		case 18:
-			startActivity(new Intent(this, ListViewActivity.class));
-			break;
-		case 19:
-			startActivity(new Intent(this, GetSDPathActivity.class));
-			break;
-		case 20:
-			startActivity(new Intent(this,GetPhoneHeapSizeActivity.class));
-			break;
-		default:
-			break;
+
+		} else {
+			startActivity(new Intent(this, demo[position].actitity));
+		}
+
+	}
+
+	//
+	// titleList = new String[] { "", "",
+	// "", "", "", "", "", "",
+	// "", "", "", "",
+	// "", "", "", "全屏测试" };
+
+	@SuppressWarnings("unused")
+	private static class DemoInfo {
+		private final String title;
+		private final Class<? extends Activity> actitity;
+
+		public DemoInfo(String title, Class<? extends Activity> activity) {
+			this.title = title;
+			this.actitity = activity;
 		}
 	}
 

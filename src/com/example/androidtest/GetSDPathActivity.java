@@ -3,6 +3,8 @@ package com.example.androidtest;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
 
 import android.app.ListActivity;
 import android.content.Context;
@@ -14,8 +16,8 @@ import android.widget.ArrayAdapter;
 public class GetSDPathActivity extends ListActivity {
 
 	private static final String TAG = "GetSDPathActivity";
-	
-	private static String[] strs;
+
+	private static List<String> strs;
 
 	private Context context;
 
@@ -23,14 +25,24 @@ public class GetSDPathActivity extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-//		setContentView(R.layout.activity_get_sdpath);
+		// setContentView(R.layout.activity_get_sdpath);
 		context = this;
 
+		strs = new ArrayList<String>();
 		String path = getAvailableSdPath("yangfeng");
 		Log.i(TAG, path);
+
+		strs.add(context.getCacheDir().getAbsolutePath());
+		strs.add(context.getCacheDir().getPath());
+		try {
+			strs.add(context.getCacheDir().getCanonicalPath());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		setListAdapter(new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1,strs));
+				android.R.layout.simple_list_item_1, strs));
+
 	}
 
 	public String getAvailableSdPath(String filePath) {
@@ -39,14 +51,16 @@ public class GetSDPathActivity extends ListActivity {
 		try {
 			String[] paths = (String[]) sm.getClass()
 					.getMethod("getVolumePaths", null).invoke(sm, null);
-            strs = paths;
+			for (String s : paths) {
+				strs.add(s);
+			}
 			for (String s : paths) {
 				Log.e(TAG, "path: " + s);
 				String fullPath = join(s, filePath);
 
 				boolean b = makeDir(fullPath, 777);
 				if (b == true) {
-					Log.i(TAG, "可用SD路径："+fullPath);
+					Log.i(TAG, "可用SD路径：" + fullPath);
 					return fullPath;
 				}
 			}
@@ -65,10 +79,10 @@ public class GetSDPathActivity extends ListActivity {
 
 	public static boolean makeDir(String dir, int mod) {
 		File destDir = new File(dir);
-		if (destDir.exists()==false) {
-			Log.i(TAG, "文件不存在，正在创建目录..."+dir);
-			if (destDir.mkdirs()==false) {
-				Log.e(TAG, "文件不存在，创建目录失败："+dir);
+		if (destDir.exists() == false) {
+			Log.i(TAG, "文件不存在，正在创建目录..." + dir);
+			if (destDir.mkdirs() == false) {
+				Log.e(TAG, "文件不存在，创建目录失败：" + dir);
 				return false;
 			}
 		}
