@@ -179,7 +179,7 @@ public class RefreshListView extends ListView implements OnScrollListener {
 
 	interface OnRefreshListener {
 		/**
-		 * 在刷新数据完成时调用，需手动调用用{link{@link #onRefresh()}方法.
+		 * 在刷新数据完成时调用，需手动调用用{@link #onRefresh()}方法.
 		 */
 		void onRefresh();
 	}

@@ -1,5 +1,5 @@
 # AndroidTest
-Demo for studing Android
+Demo for studying Android
 ##1.SD card Demo
 ##2.屏幕dp演示
 ##3.跳转QQ窗体

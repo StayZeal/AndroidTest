@@ -142,6 +142,22 @@
             android:name=".GetPhoneHeapSizeActivity"
             android:label="@string/title_activity_get_phone_heap_size" >
         </activity>
+        <activity
+            android:name=".ExecuteCommandActivity"
+            android:label="@string/title_activity_execute_command" >
+        </activity>
+        <activity
+            android:name=".ShowCommandResultActivity"
+            android:label="@string/title_activity_show_command_result" >
+        </activity>
+        <activity
+            android:name=".FragmentTestActivity"
+            android:label="@string/title_activity_fragment_test" >
+        </activity>
+        <activity
+            android:name=".PopupWindowActivity"
+            android:label="@string/title_activity_popup_window" >
+        </activity>
     </application>
 
 </manifest>

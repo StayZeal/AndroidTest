@@ -31,5 +31,9 @@
     <string name="title_activity_intent_test">IntentTestActivity</string>
     <string name="title_activity_get_sdpath">GetSDPathActivity</string>
     <string name="title_activity_get_phone_heap_size">GetPhoneHeapSizeActivity</string>
+    <string name="title_activity_execute_command">ExecuteCommandActivity</string>
+    <string name="title_activity_show_command_result">ShowCommandResultActivity</string>
+    <string name="title_activity_fragment_test">FragmentTestActivity</string>
+    <string name="title_activity_popup_window">PopupWindowActivity</string>
 
 </resources>

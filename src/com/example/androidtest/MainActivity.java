@@ -32,7 +32,7 @@ public class MainActivity extends ListActivity {
 	private Animation animation;
 	private Context context;
 	private Activity acticity;
-//	private List<String> testList;
+	// private List<String> testList;
 	private List<String> titleList;
 	private ArrayAdapter<String> arrayAdapter;
 
@@ -58,7 +58,9 @@ public class MainActivity extends ListActivity {
 			new DemoInfo("Intent使用", IntentTestActivity.class),
 			new DemoInfo("listViewbtn和text点击事件", ListViewActivity.class),
 			new DemoInfo("SD路径适配", GetSDPathActivity.class),
-			new DemoInfo("显示手机堆大小", GetPhoneHeapSizeActivity.class)};
+			new DemoInfo("显示手机堆大小", GetPhoneHeapSizeActivity.class),
+			new DemoInfo("执行linux 命令", ExecuteCommandActivity.class),
+			new DemoInfo("popupwindow", PopupWindowActivity.class) };
 
 	@SuppressWarnings("unchecked")
 	@Override
