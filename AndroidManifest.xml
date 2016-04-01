@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidtest"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -13,17 +13,16 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
-    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,132 +31,103 @@
         </activity>
         <activity
             android:name=".ZakerActivity"
-            android:label="@string/title_activity_zaker" >
-        </activity>
+            android:label="@string/title_activity_zaker"></activity>
         <activity
             android:name=".TestZakerActivity"
-            android:label="@string/title_activity_test_zaker" >
-        </activity>
+            android:label="@string/title_activity_test_zaker"></activity>
         <activity
             android:name=".TestViewPagerActivity"
-            android:label="@string/title_activity_test_view_pager" >
-        </activity>
+            android:label="@string/title_activity_test_view_pager"></activity>
         <activity
             android:name="com.example.viewpager.BackGroundColorAnimationActivity"
-            android:label="@string/title_activity_test_zaker" >
-        </activity>
+            android:label="@string/title_activity_test_zaker"></activity>
         <activity
             android:name="com.example.loadertest.LoaderTestActivity"
-            android:label="@string/title_activity_loader_test" >
-        </activity>
+            android:label="@string/title_activity_loader_test"></activity>
         <activity
             android:name=".MassnActivity"
             android:label="@string/title_activity_massn"
-            android:parentActivityName="android.app.ListActivity" >
+            android:parentActivityName="android.app.ListActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="android.app.ListActivity" />
         </activity>
         <activity
             android:name=".ImageTranspaencyActivity"
-            android:label="@string/title_activity_image_transpaency" >
-        </activity>
+            android:label="@string/title_activity_image_transpaency"></activity>
         <activity
             android:name=".ImagePixelActivity"
-            android:label="@string/title_activity_image_pixel" >
-        </activity>
+            android:label="@string/title_activity_image_pixel"></activity>
         <activity
             android:name=".StartForResultActivity_A"
-            android:label="@string/title_activity_start_for_result_activity_" >
-        </activity>
+            android:label="@string/title_activity_start_for_result_activity_"></activity>
         <activity
             android:name=".StartForResultActivity_B"
-            android:label="@string/title_activity_start_for_result_activity__b" >
-        </activity>
+            android:label="@string/title_activity_start_for_result_activity__b"></activity>
         <activity
             android:name="com.example.listview.RefreshListViewActivity"
-            android:label="@string/title_activity_refresh_list_view" >
-        </activity>
+            android:label="@string/title_activity_refresh_list_view"></activity>
         <activity
             android:name=".storage.SharePreferenceActivity"
-            android:label="@string/title_activity_share_preference" >
-        </activity>
+            android:label="@string/title_activity_share_preference"></activity>
         <activity
             android:name=".intent.IntentActivity1"
-            android:label="@string/title_activity_intent_activity1" >
-        </activity>
+            android:label="@string/title_activity_intent_activity1"></activity>
         <activity
             android:name=".material.MaterialActivity"
-            android:label="@string/title_activity_material" >
-        </activity>
+            android:label="@string/title_activity_material"></activity>
         <activity
             android:name=".charge.ChargeActivity"
-            android:label="@string/title_activity_charge" >
-        </activity>
+            android:label="@string/title_activity_charge"></activity>
         <activity
             android:name=".display.DisplayActivity"
-            android:label="@string/title_activity_display" >
-        </activity>
+            android:label="@string/title_activity_display"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".locate.GpsActivity"
-            android:label="@string/title_activity_gps" >
-        </activity>
+            android:label="@string/title_activity_gps"></activity>
         <activity
             android:name=".ScrollGridActivity"
-            android:label="@string/title_activity_scroll_grid" >
-        </activity>
+            android:label="@string/title_activity_scroll_grid"></activity>
         <activity
             android:name="com.example.listview.ListViewActivity"
-            android:label="@string/title_activity_list_view" >
-        </activity>
+            android:label="@string/title_activity_list_view"></activity>
         <activity
             android:name=".VideoViewActivity"
-            android:label="@string/title_activity_video_view" >
-        </activity>
+            android:label="@string/title_activity_video_view"></activity>
         <activity
             android:name=".UsbConnectActivity"
-            android:label="@string/title_activity_usb_connect" >
-        </activity>
+            android:label="@string/title_activity_usb_connect"></activity>
         <activity
             android:name=".RSAEncryptActivity"
-            android:label="@string/title_activity_jia_mi" >
-        </activity>
+            android:label="@string/title_activity_jia_mi"></activity>
         <activity
             android:name=".VolleyActivity"
-            android:label="@string/title_activity_volley" >
-        </activity>
+            android:label="@string/title_activity_volley"></activity>
         <activity
             android:name=".BreakDownloadActivity"
-            android:label="@string/title_activity_break_download" >
-        </activity>
+            android:label="@string/title_activity_break_download"></activity>
         <activity
             android:name=".IntentTestActivity"
-            android:label="@string/title_activity_intent_test" >
-        </activity>
+            android:label="@string/title_activity_intent_test"></activity>
         <activity
             android:name=".GetSDPathActivity"
-            android:label="@string/title_activity_get_sdpath" >
-        </activity>
+            android:label="@string/title_activity_get_sdpath"></activity>
         <activity
             android:name=".GetPhoneHeapSizeActivity"
-            android:label="@string/title_activity_get_phone_heap_size" >
-        </activity>
+            android:label="@string/title_activity_get_phone_heap_size"></activity>
         <activity
             android:name=".ExecuteCommandActivity"
-            android:label="@string/title_activity_execute_command" >
-        </activity>
+            android:label="@string/title_activity_execute_command"></activity>
         <activity
             android:name=".ShowCommandResultActivity"
-            android:label="@string/title_activity_show_command_result" >
-        </activity>
+            android:label="@string/title_activity_show_command_result"></activity>
         <activity
             android:name=".FragmentTestActivity"
-            android:label="@string/title_activity_fragment_test" >
-        </activity>
+            android:label="@string/title_activity_fragment_test"></activity>
         <activity
             android:name=".PopupWindowActivity"
-            android:label="@string/title_activity_popup_window" >
-        </activity>
+            android:label="@string/title_activity_popup_window"></activity>
     </application>
 
 </manifest>

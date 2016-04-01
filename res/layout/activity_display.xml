@@ -1,72 +1,75 @@
-<LinearLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    
-    <TextView 
-        android:text="320dp"
-        android:textColor="@android:color/white"
+
+    <TextView
+        android:id="@+id/current_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:background="@android:color/black"
-        />
+        android:text="320dp"
+        android:textColor="@android:color/white" />
+
     <TextView
-        android:text="满屏"
         android:layout_width="match_parent"
-        android:textColor="@android:color/white"
-        android:background="@android:color/black"
         android:layout_height="wrap_content"
-        />
-    <TextView 
-        android:text="160dp"
-        android:layout_width="160dp"
-        android:textColor="@android:color/white"
         android:background="@android:color/black"
-        android:layout_height="wrap_content"
-        />
-    <TextView 
-        android:text="160dp"
+        android:text="满屏"
+        android:textColor="@android:color/white" />
+
+    <TextView
         android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:text="160dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:textColor="@android:color/white"
         android:background="@android:color/black"
-        android:layout_height="wrap_content"
-        />
-     <TextView 
-        android:text="480dp"
+        android:text="160dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
         android:layout_width="480dp"
-        android:textColor="@android:color/white"
-        android:background="@android:color/black"
         android:layout_height="wrap_content"
-        />
-     <TextView 
-        android:text="400dp"
+        android:background="@android:color/black"
+        android:text="480dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
         android:layout_width="400dp"
-        android:textColor="@android:color/white"
-        android:background="@android:color/black"
         android:layout_height="wrap_content"
-        />
-     <TextView 
-        android:text="360dp"
+        android:background="@android:color/black"
+        android:text="400dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
         android:layout_width="360dp"
-        android:textColor="@android:color/white"
-        android:background="@android:color/black"
         android:layout_height="wrap_content"
-        />
-     <TextView 
-        android:text="350dp"
+        android:background="@android:color/black"
+        android:text="360dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
         android:layout_width="350dp"
-        android:textColor="@android:color/white"
-        android:background="@android:color/black"
         android:layout_height="wrap_content"
-        />
-      <TextView 
-        android:text="359dp"
+        android:background="@android:color/black"
+        android:text="350dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
         android:layout_width="359dp"
-        android:textColor="@android:color/white"
-        android:background="@android:color/black"
         android:layout_height="wrap_content"
-        />
-    
+        android:background="@android:color/black"
+        android:text="359dp"
+        android:textColor="@android:color/white" />
+
 </LinearLayout>
