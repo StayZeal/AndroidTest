@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.androidtest.FrameLayoutOnClickActivity">
+
+    <TextView
+        android:id="@+id/frame_text1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="文本1" />
+
+    <TextView
+        android:id="@+id/frame_text2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="文本2" />
+
+    <TextView
+        android:id="@+id/frame_text3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="文本3" />
+
+    <TextView
+        android:id="@+id/frame_text4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="文本4" />
+
+
+</RelativeLayout>

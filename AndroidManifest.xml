@@ -13,7 +13,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -31,19 +34,19 @@
         </activity>
         <activity
             android:name=".ZakerActivity"
-            android:label="@string/title_activity_zaker"></activity>
+            android:label="@string/title_activity_zaker" />
         <activity
             android:name=".TestZakerActivity"
-            android:label="@string/title_activity_test_zaker"></activity>
+            android:label="@string/title_activity_test_zaker" />
         <activity
             android:name=".TestViewPagerActivity"
-            android:label="@string/title_activity_test_view_pager"></activity>
+            android:label="@string/title_activity_test_view_pager" />
         <activity
             android:name="com.example.viewpager.BackGroundColorAnimationActivity"
-            android:label="@string/title_activity_test_zaker"></activity>
+            android:label="@string/title_activity_test_zaker" />
         <activity
             android:name="com.example.loadertest.LoaderTestActivity"
-            android:label="@string/title_activity_loader_test"></activity>
+            android:label="@string/title_activity_loader_test" />
         <activity
             android:name=".MassnActivity"
             android:label="@string/title_activity_massn"
@@ -54,80 +57,86 @@
         </activity>
         <activity
             android:name=".ImageTranspaencyActivity"
-            android:label="@string/title_activity_image_transpaency"></activity>
+            android:label="@string/title_activity_image_transpaency" />
         <activity
             android:name=".ImagePixelActivity"
-            android:label="@string/title_activity_image_pixel"></activity>
+            android:label="@string/title_activity_image_pixel" />
         <activity
             android:name=".StartForResultActivity_A"
-            android:label="@string/title_activity_start_for_result_activity_"></activity>
+            android:label="@string/title_activity_start_for_result_activity_" />
         <activity
             android:name=".StartForResultActivity_B"
-            android:label="@string/title_activity_start_for_result_activity__b"></activity>
+            android:label="@string/title_activity_start_for_result_activity__b" />
         <activity
             android:name="com.example.listview.RefreshListViewActivity"
-            android:label="@string/title_activity_refresh_list_view"></activity>
+            android:label="@string/title_activity_refresh_list_view" />
         <activity
             android:name=".storage.SharePreferenceActivity"
-            android:label="@string/title_activity_share_preference"></activity>
+            android:label="@string/title_activity_share_preference" />
         <activity
             android:name=".intent.IntentActivity1"
-            android:label="@string/title_activity_intent_activity1"></activity>
+            android:label="@string/title_activity_intent_activity1" />
         <activity
             android:name=".material.MaterialActivity"
-            android:label="@string/title_activity_material"></activity>
+            android:label="@string/title_activity_material" />
         <activity
             android:name=".charge.ChargeActivity"
-            android:label="@string/title_activity_charge"></activity>
+            android:label="@string/title_activity_charge" />
         <activity
             android:name=".display.DisplayActivity"
             android:label="@string/title_activity_display"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".locate.GpsActivity"
-            android:label="@string/title_activity_gps"></activity>
+            android:label="@string/title_activity_gps" />
         <activity
             android:name=".ScrollGridActivity"
-            android:label="@string/title_activity_scroll_grid"></activity>
+            android:label="@string/title_activity_scroll_grid" />
         <activity
             android:name="com.example.listview.ListViewActivity"
-            android:label="@string/title_activity_list_view"></activity>
+            android:label="@string/title_activity_list_view" />
         <activity
             android:name=".VideoViewActivity"
-            android:label="@string/title_activity_video_view"></activity>
+            android:label="@string/title_activity_video_view" />
         <activity
             android:name=".UsbConnectActivity"
-            android:label="@string/title_activity_usb_connect"></activity>
+            android:label="@string/title_activity_usb_connect" />
         <activity
             android:name=".RSAEncryptActivity"
-            android:label="@string/title_activity_jia_mi"></activity>
+            android:label="@string/title_activity_jia_mi" />
         <activity
             android:name=".VolleyActivity"
-            android:label="@string/title_activity_volley"></activity>
+            android:label="@string/title_activity_volley" />
         <activity
             android:name=".BreakDownloadActivity"
-            android:label="@string/title_activity_break_download"></activity>
+            android:label="@string/title_activity_break_download" />
         <activity
             android:name=".IntentTestActivity"
-            android:label="@string/title_activity_intent_test"></activity>
+            android:label="@string/title_activity_intent_test" />
         <activity
             android:name=".GetSDPathActivity"
-            android:label="@string/title_activity_get_sdpath"></activity>
+            android:label="@string/title_activity_get_sdpath" />
         <activity
             android:name=".GetPhoneHeapSizeActivity"
-            android:label="@string/title_activity_get_phone_heap_size"></activity>
+            android:label="@string/title_activity_get_phone_heap_size" />
         <activity
             android:name=".ExecuteCommandActivity"
-            android:label="@string/title_activity_execute_command"></activity>
+            android:label="@string/title_activity_execute_command" />
         <activity
             android:name=".ShowCommandResultActivity"
-            android:label="@string/title_activity_show_command_result"></activity>
+            android:label="@string/title_activity_show_command_result" />
         <activity
             android:name=".FragmentTestActivity"
-            android:label="@string/title_activity_fragment_test"></activity>
+            android:label="@string/title_activity_fragment_test" />
         <activity
             android:name=".PopupWindowActivity"
-            android:label="@string/title_activity_popup_window"></activity>
+            android:label="@string/title_activity_popup_window" />
+        <activity android:name=".FullScreenActivity" />
+        <activity
+            android:name=".VideoActivity"
+            android:label="@string/title_activity_video" />
+        <activity android:name=".widget.WidgetActivity" />
+        <activity android:name=".FrameLayoutOnClickActivity"></activity>
     </application>
 
 </manifest>

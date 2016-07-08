@@ -35,5 +35,6 @@
     <string name="title_activity_show_command_result">ShowCommandResultActivity</string>
     <string name="title_activity_fragment_test">FragmentTestActivity</string>
     <string name="title_activity_popup_window">PopupWindowActivity</string>
+    <string name="title_activity_video">VideoActivity</string>
 
 </resources>
