@@ -7,7 +7,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="com.example.androidtest.ZakerActivity" >
+    tools:context=".activity.ZakerActivity" >
 
    <!--  <ImageView 
         android:id="@+id/image_bg"
