@@ -61,7 +61,10 @@ public class MainActivity extends ListActivity {
             new DemoInfo("popupwindow", PopupWindowActivity.class),
             new DemoInfo("FrameLayout点击事件", FrameLayoutOnClickActivity.class),
             new DemoInfo("全屏测试", FullScreenActivity.class),
-            new DemoInfo("Activity生命周期", LifecycleTestActivity.class)};
+            new DemoInfo("Activity生命周期", LifecycleTestActivity.class),
+            new DemoInfo("Camera", CameraActivity.class),
+            new DemoInfo("透明状态栏", TransparentActivity.class)
+    };
 
     @SuppressWarnings("unchecked")
     @Override

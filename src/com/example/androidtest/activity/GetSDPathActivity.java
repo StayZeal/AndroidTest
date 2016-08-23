@@ -4,8 +4,6 @@ import android.app.ListActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.StatFs;
-import android.os.storage.StorageManager;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 
@@ -14,7 +12,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,45 +60,46 @@ public class GetSDPathActivity extends ListActivity {
 	}
 
 	public String getAvailableSdPath(String filePath) {
-
-		String availablePath = "";
-
-		StorageManager sm = (StorageManager) context
-				.getSystemService(Context.STORAGE_SERVICE);
-		try {
-			String[] paths = (String[]) sm.getClass()
-					.getMethod("getVolumePaths", null).invoke(sm, null);
-			for (String s : paths) {
-				Log.e(TAG, "path: " + s);
-				String fullPath = join(s, filePath);
-
-				boolean b = makeDir(fullPath, 777);
-				if (b == true) {
-					Log.i(TAG, "可用SD路径：" + fullPath);
-					availablePath = fullPath;
-					// return availablePath;
-					StatFs statfs = new StatFs(availablePath);
-					long totalBlocks = statfs.getBlockCountLong();
-					long size = statfs.getBlockSizeLong();
-					long total = totalBlocks * size;
-					strs.add("可用SD路径：" + availablePath + " 大小：" + total / 1024
-							/ 1024 / 1024 + "G");
-
-				} else {
-					strs.add("不可用SD：" + s);
-				}
-			}
-
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-		} catch (InvocationTargetException e) {
-			e.printStackTrace();
-		} catch (NoSuchMethodException e) {
-			e.printStackTrace();
-		}
-		return availablePath;
+//
+//		String availablePath = "";
+//
+//		StorageManager sm = (StorageManager) context
+//				.getSystemService(Context.STORAGE_SERVICE);
+//		try {
+//			String[] paths = (String[]) sm.getClass()
+//					.getMethod("getVolumePaths", null).invoke(sm, null);
+//			for (String s : paths) {
+//				Log.e(TAG, "path: " + s);
+//				String fullPath = join(s, filePath);
+//
+//				boolean b = makeDir(fullPath, 777);
+//				if (b == true) {
+//					Log.i(TAG, "可用SD路径：" + fullPath);
+//					availablePath = fullPath;
+//					// return availablePath;
+//					StatFs statfs = new StatFs(availablePath);
+//					long totalBlocks = statfs.getBlockCountLong();
+//					long size = statfs.getBlockSizeLong();
+//					long total = totalBlocks * size;
+//					strs.add("可用SD路径：" + availablePath + " 大小：" + total / 1024
+//							/ 1024 / 1024 + "G");
+//
+//				} else {
+//					strs.add("不可用SD：" + s);
+//				}
+//			}
+//
+//		} catch (IllegalAccessException e) {
+//			e.printStackTrace();
+//		} catch (IllegalArgumentException e) {
+//			e.printStackTrace();
+//		} catch (InvocationTargetException e) {
+//			e.printStackTrace();
+//		} catch (NoSuchMethodException e) {
+//			e.printStackTrace();
+//		}
+//		return availablePath;
+		return null;
 	}
 
 	public static boolean makeDir(String dir, int mod) {
