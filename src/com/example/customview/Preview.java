@@ -1,12 +1,13 @@
 package com.example.customview;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.hardware.Camera;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import java.io.IOException;
 import java.util.List;
@@ -14,17 +15,45 @@ import java.util.List;
 /**
  * Created by yangfeng on 2016/8/10.
  */
-public class Preview extends ViewGroup implements SurfaceHolder.Callback {
+public class Preview extends FrameLayout implements SurfaceHolder.Callback {
 
     private static final String TAG = "Preview";
     private SurfaceView mSurfaceView;
     private SurfaceHolder mSurfaceHolder;
     private Camera mCamera;
     private List<Camera.Size> mSupportedPreviewSizes;
+    private Context context;
 
     public Preview(Context context) {
         super(context);
+        init(context);
+        this.context = context;
 
+        Log.i(TAG, "Preview(Context context)");
+
+//        mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+    }
+
+    public Preview(Context context, AttributeSet attrs) {
+        super(context, attrs);
+//        init(context);
+        this.context = context;
+
+        Log.i(TAG, "Preview(Context context, AttributeSet attrs)");
+    }
+
+    public Preview(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context);
+    }
+
+    public Preview(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        init(context);
+    }
+
+
+    private void init(Context context) {
         mSurfaceView = new SurfaceView(context);
         addView(mSurfaceView);
 
@@ -32,26 +61,15 @@ public class Preview extends ViewGroup implements SurfaceHolder.Callback {
         // underlying surface is created and destroyed.
         mSurfaceHolder = mSurfaceView.getHolder();
         mSurfaceHolder.addCallback(this);
-//        mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
-    }
-
-    public Preview(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
-
-    public Preview(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
-
-    public Preview(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
     }
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
 
+        Log.i(TAG, "surfaceCreated");
         try {
             mCamera.setPreviewDisplay(holder);
+            mCamera.setDisplayOrientation(90);
             mCamera.startPreview();
         } catch (IOException e) {
             Log.d(TAG, "Error setting camera preview: " + e.getMessage());
@@ -63,7 +81,20 @@ public class Preview extends ViewGroup implements SurfaceHolder.Callback {
         // Now that the size is known, set up the camera parameters and begin
         // the preview.
         Camera.Parameters parameters = mCamera.getParameters();
-        parameters.setPreviewSize(width, height);
+
+        List<Camera.Size> previewSizes = parameters.getSupportedPreviewSizes();
+        for (Camera.Size s : previewSizes) {
+            Log.i(TAG, "width:" + s.width + " height:" + s.height);
+        }
+
+        // You need to choose the most appropriate previewSize for your app
+        Camera.Size previewSize = previewSizes.get(0);// .... select one of previewSizes here
+
+        if (previewSize.width >= previewSize.height) {
+            parameters.setPreviewSize(previewSize.height, previewSize.width);
+        } else {
+            parameters.setPreviewSize(previewSize.width, previewSize.height);
+        }
         requestLayout();
         mCamera.setParameters(parameters);
 
@@ -83,13 +114,10 @@ public class Preview extends ViewGroup implements SurfaceHolder.Callback {
         }
     }
 
-    @Override
-    protected void onLayout(boolean changed, int l, int t, int r, int b) {
-
-    }
 
     public void setCamera(Camera camera) {
 
+        Log.i(TAG, "setCamera");
 
         if (mCamera == camera) {
             return;
@@ -98,6 +126,8 @@ public class Preview extends ViewGroup implements SurfaceHolder.Callback {
         stopPreviewAndFreeCamera();
 
         mCamera = camera;
+
+        init(context);
 
         if (mCamera != null) {
             List<Camera.Size> localSizes = mCamera.getParameters().getSupportedPreviewSizes();
@@ -130,4 +160,8 @@ public class Preview extends ViewGroup implements SurfaceHolder.Callback {
         }
     }
 
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+    }
 }

@@ -63,7 +63,9 @@ public class MainActivity extends ListActivity {
             new DemoInfo("全屏测试", FullScreenActivity.class),
             new DemoInfo("Activity生命周期", LifecycleTestActivity.class),
             new DemoInfo("Camera", CameraActivity.class),
-            new DemoInfo("透明状态栏", TransparentActivity.class)
+            new DemoInfo("透明状态栏", TransparentActivity.class),
+            new DemoInfo("ScrollView",ScrollActivity.class),
+            new DemoInfo("ScrollingActivity",ScrollingActivity.class)
     };
 
     @SuppressWarnings("unchecked")
