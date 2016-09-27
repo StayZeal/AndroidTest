@@ -64,8 +64,12 @@ public class MainActivity extends ListActivity {
             new DemoInfo("Activity生命周期", LifecycleTestActivity.class),
             new DemoInfo("Camera", CameraActivity.class),
             new DemoInfo("透明状态栏", TransparentActivity.class),
-            new DemoInfo("ScrollView",ScrollActivity.class),
-            new DemoInfo("ScrollingActivity",ScrollingActivity.class)
+            new DemoInfo("ScrollView", ScrollActivity.class),
+            new DemoInfo("ScrollingActivity", ScrollingActivity.class),
+            new DemoInfo("GLSurface", GlSurfaceActivity.class),
+            new DemoInfo("GLSurface 2", GlSurfaceActivity2.class),
+            new DemoInfo("RecycleDemo", RecycleDemoActivity.class),
+            new DemoInfo("QlcodeDemo",QlCodeActivity.class)
     };
 
     @SuppressWarnings("unchecked")
@@ -126,11 +130,11 @@ public class MainActivity extends ListActivity {
 
     }
 
-    //
-    // titleList = new String[] { "", "",
-    // "", "", "", "", "", "",
-    // "", "", "", "",
-    // "", "", "", "全屏测试" };
+//
+// titleList = new String[] { "", "",
+// "", "", "", "", "", "",
+// "", "", "", "",
+// "", "", "", "全屏测试" };
 
     @SuppressWarnings("unused")
     private static class DemoInfo {

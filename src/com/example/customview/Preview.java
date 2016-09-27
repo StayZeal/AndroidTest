@@ -90,12 +90,12 @@ public class Preview extends FrameLayout implements SurfaceHolder.Callback {
         // You need to choose the most appropriate previewSize for your app
         Camera.Size previewSize = previewSizes.get(0);// .... select one of previewSizes here
 
-        if (previewSize.width >= previewSize.height) {
-            parameters.setPreviewSize(previewSize.height, previewSize.width);
-        } else {
+//        if (previewSize.width >= previewSize.height) {
+//            parameters.setPreviewSize(previewSize.height, previewSize.width);
+//        } else {
             parameters.setPreviewSize(previewSize.width, previewSize.height);
-        }
-        requestLayout();
+//        }
+//        requestLayout();
         mCamera.setParameters(parameters);
 
         // Important: Call startPreview() to start updating the preview surface.
