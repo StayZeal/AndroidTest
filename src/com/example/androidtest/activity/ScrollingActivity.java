@@ -17,7 +17,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.example.androidtest.R;
-import com.example.androidtest.adapter.VPAdapter;
+import com.example.androidtest.adapter.BaseVPAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +44,7 @@ public class ScrollingActivity extends AppCompatActivity {
     TabLayout tablayout;
     /*    @Bind(R.id.listview)
         ListView listview;*/
-    private VPAdapter<String> mVpAdapter;
+    private BaseVPAdapter<String> mVpAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +93,7 @@ public class ScrollingActivity extends AppCompatActivity {
 
 
     private void init() {
-        mVpAdapter = new VPAdapter<>(getSupportFragmentManager(), getData());
+        mVpAdapter = new BaseVPAdapter<>(getSupportFragmentManager(), getData());
         viewPager.setAdapter(mVpAdapter);
 
 //        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,

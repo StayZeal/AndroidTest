@@ -15,7 +15,7 @@ import android.widget.MediaController;
 import android.widget.RelativeLayout;
 
 import com.example.androidtest.R;
-import com.example.androidtest.adapter.VPAdapter;
+import com.example.androidtest.adapter.BaseVPAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ public class TransparentActivity extends AppCompatActivity {
     private GestureDetectorCompat mDetector;
 
     MediaController m;
-    private VPAdapter<String> mVpAdapter;
+    private BaseVPAdapter<String> mVpAdapter;
 
     FrameLayout
             fl;
@@ -67,7 +67,7 @@ public class TransparentActivity extends AppCompatActivity {
 
 
     private void init() {
-        mVpAdapter = new VPAdapter<>(getSupportFragmentManager(), getData());
+        mVpAdapter = new BaseVPAdapter<>(getSupportFragmentManager(), getData());
         viewPager.setAdapter(mVpAdapter);
     }
 

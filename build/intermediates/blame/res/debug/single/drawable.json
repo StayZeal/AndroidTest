@@ -44,10 +44,6 @@
         "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\drawable\\sample_footer_loading.png",
-        "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\AndroidTest\\recyclelibrary\\unspecified\\res\\drawable\\sample_footer_loading.png"
-    },
-    {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
         "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
     },
@@ -102,10 +98,6 @@
     {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
         "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
-    },
-    {
-        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\drawable\\sample_footer_loading_progress.xml",
-        "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\AndroidTest\\recyclelibrary\\unspecified\\res\\drawable\\sample_footer_loading_progress.xml"
     },
     {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",

@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.example.androidtest.R;
-import com.example.androidtest.adapter.VPAdapter;
+import com.example.androidtest.adapter.BaseVPAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class ScrollActivity extends AppCompatActivity {
     ViewPager viewPager;
     private GestureDetectorCompat mDetector;
 
-    private VPAdapter<String> mVpAdapter;
+    private BaseVPAdapter<String> mVpAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +59,7 @@ public class ScrollActivity extends AppCompatActivity {
 
 
     private void init() {
-        mVpAdapter = new VPAdapter<>(getSupportFragmentManager(), getData());
+        mVpAdapter = new BaseVPAdapter<>(getSupportFragmentManager(), getData());
         viewPager.setAdapter(mVpAdapter);
     }
 

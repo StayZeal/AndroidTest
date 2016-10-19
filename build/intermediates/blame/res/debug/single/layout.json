@@ -4,10 +4,6 @@
         "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
-        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\def_load_more_failed.xml",
-        "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\AndroidTest\\recyclelibrary\\unspecified\\res\\layout\\def_load_more_failed.xml"
-    },
-    {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
         "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_header.xml"
     },
@@ -16,12 +12,12 @@
         "source": "D:\\workspace\\AndroidTest\\res\\layout\\view_pager_3.xml"
     },
     {
-        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
-    },
-    {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
         "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\frag_list.xml",
@@ -120,12 +116,12 @@
         "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
     },
     {
-        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_break_download.xml",
-        "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_break_download.xml"
-    },
-    {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
         "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_break_download.xml",
+        "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_break_download.xml"
     },
     {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_popup_window.xml",
@@ -176,20 +172,20 @@
         "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_frame_layout_on_click.xml"
     },
     {
-        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_full_screen.xml",
-        "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_full_screen.xml"
-    },
-    {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\viewpager_item_1.xml",
-        "source": "D:\\workspace\\AndroidTest\\res\\layout\\viewpager_item_1.xml"
+        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_full_screen.xml",
+        "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_full_screen.xml"
     },
     {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_lifecycle_test.xml",
         "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_lifecycle_test.xml"
+    },
+    {
+        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\viewpager_item_1.xml",
+        "source": "D:\\workspace\\AndroidTest\\res\\layout\\viewpager_item_1.xml"
     },
     {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\test.xml",
@@ -336,12 +332,12 @@
         "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\footview.xml",
         "source": "D:\\workspace\\AndroidTest\\res\\layout\\footview.xml"
+    },
+    {
+        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
@@ -392,20 +388,20 @@
         "source": "D:\\workspace\\AndroidTest\\res\\layout\\view_pager_2.xml"
     },
     {
-        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\def_loading.xml",
-        "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\AndroidTest\\recyclelibrary\\unspecified\\res\\layout\\def_loading.xml"
+        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_life.xml",
+        "source": "D:\\workspace\\AndroidTest\\res\\layout\\fragment_life.xml"
     },
     {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
         "source": "D:\\workspace\\AndroidTest\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu_item.xml"
     },
     {
-        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gl_surface2.xml",
-        "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_gl_surface2.xml"
-    },
-    {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gl_surface.xml",
         "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_gl_surface.xml"
+    },
+    {
+        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gl_surface2.xml",
+        "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_gl_surface2.xml"
     },
     {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_transparent.xml",
@@ -414,6 +410,10 @@
     {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\widget_toolbar.xml",
         "source": "D:\\workspace\\AndroidTest\\res\\layout\\widget_toolbar.xml"
+    },
+    {
+        "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_lifecycle_test2.xml",
+        "source": "D:\\workspace\\AndroidTest\\res\\layout\\activity_lifecycle_test2.xml"
     },
     {
         "merged": "D:\\workspace\\AndroidTest\\build\\intermediates\\res\\merged\\debug\\layout\\activity_scroll.xml",
