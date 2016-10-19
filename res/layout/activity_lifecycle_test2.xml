@@ -12,5 +12,5 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="生命周期测试2，看log" />
+        android:text="生命周期测试2qqqqqqq，看log" />
 </RelativeLayout>
