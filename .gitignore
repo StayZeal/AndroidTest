@@ -3,8 +3,9 @@
 /gradle.properties
 /gradle
 /build
-/.settings
+/.classpath
+/gradlew.bat
+/gradlew
+/AndroidTest.iml
 /.idea
 /.gradle
-/bin/
-/gen/
