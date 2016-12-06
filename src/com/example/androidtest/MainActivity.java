@@ -11,6 +11,7 @@ import android.view.animation.Animation;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.androidtest.activity.BrightnessActivity;
 import com.example.androidtest.activity.CameraActivity;
 import com.example.androidtest.activity.ExecuteCommandActivity;
 import com.example.androidtest.activity.FrameLayoutOnClickActivity;
@@ -92,7 +93,8 @@ public class MainActivity extends ListActivity {
             new DemoInfo("GLSurface", GlSurfaceActivity.class),
             new DemoInfo("GLSurface 2", GlSurfaceActivity2.class),
             new DemoInfo("RecycleDemo", RecycleDemoActivity.class),
-            new DemoInfo("QlcodeDemo", QlCodeActivity.class)
+            new DemoInfo("QlcodeDemo", QlCodeActivity.class),
+            new DemoInfo("屏幕亮度", BrightnessActivity.class)
     };
 
     @SuppressWarnings("unchecked")
