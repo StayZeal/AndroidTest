@@ -1,6 +1,7 @@
 package com.example.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,24 +20,35 @@ import butterknife.ButterKnife;
 public class MainAdapter extends RecyclerView.Adapter {
 
 
-    private Context context;
+    private Context mContext;
     private DemoInfo[] datas;
 
     public MainAdapter(Context context) {
-        this.context = context;
+        this.mContext = context;
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item_main_list, parent, false);
-        ViewHolder viewHolder = new ViewHolder(v);
+        View v = LayoutInflater.from(mContext).inflate(R.layout.item_main_list, parent, false);
+        final ViewHolder viewHolder = new ViewHolder(v);
+
+        /**
+         *  放在此处为-1
+         */
+//        final int postion = viewHolder.getAdapterPosition();
         viewHolder.title.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(context,datas[])
+                final int postion = viewHolder.getAdapterPosition();
+                Intent intent = new Intent(mContext, datas[postion].actitity);
+                mContext.startActivity(intent);
+//                Toast.makeText(mContext, "llllllllllll", Toast.LENGTH_SHORT).show();
+
+
             }
         });
         return viewHolder;
+
     }
 
     public void setDatas(DemoInfo[] datas) {
