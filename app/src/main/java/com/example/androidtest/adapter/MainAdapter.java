@@ -1,4 +1,4 @@
-package com.example.adapter;
+package com.example.androidtest.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.androidtest.DemoInfo;
 import com.example.androidtest.R;
-import com.example.constant.DemoInfo;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
