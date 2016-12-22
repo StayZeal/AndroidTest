@@ -1,4 +1,4 @@
-package com.example.loadertest;
+package com.example.androidtest.loadertest;
 
 
 import com.example.androidtest.R;

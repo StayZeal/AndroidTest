@@ -1,4 +1,4 @@
-package com.example.java;
+package com.example.androidtest.java;
 
 /**
  * Created by yangfeng on 2016/6/20.

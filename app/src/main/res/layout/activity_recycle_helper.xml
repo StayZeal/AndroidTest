@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.QlCodeActivity">
 
-    <com.example.customview.QlcodeView
+    <com.example.androidtest.customview.QlcodeView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

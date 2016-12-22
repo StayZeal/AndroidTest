@@ -9,7 +9,7 @@ import android.view.SurfaceView;
 import android.widget.FrameLayout;
 
 import com.example.androidtest.R;
-import com.example.customview.Preview;
+import com.example.androidtest.customview.Preview;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

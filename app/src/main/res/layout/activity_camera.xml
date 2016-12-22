@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context="com.example.androidtest.activity.CameraActivity">
 
-    <com.example.customview.Preview
+    <com.example.androidtest.customview.Preview
         android:id="@+id/camerea_preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

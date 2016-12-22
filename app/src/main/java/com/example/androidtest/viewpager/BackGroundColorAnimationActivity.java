@@ -1,4 +1,4 @@
-package com.example.viewpager;
+package com.example.androidtest.viewpager;
 
 
 import com.example.androidtest.R;

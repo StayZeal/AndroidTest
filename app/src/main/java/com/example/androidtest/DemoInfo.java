@@ -1,4 +1,4 @@
-package com.example.constant;
+package com.example.androidtest;
 
 import android.app.Activity;
 
@@ -26,15 +26,16 @@ import com.example.androidtest.activity.TestZakerActivity;
 import com.example.androidtest.activity.TransparentActivity;
 import com.example.androidtest.activity.VideoViewActivity;
 import com.example.androidtest.activity.VolleyActivity;
+import com.example.androidtest.activity.ZoomImageActivity;
 import com.example.androidtest.charge.ChargeActivity;
 import com.example.androidtest.display.DisplayActivity;
 import com.example.androidtest.intent.IntentActivity1;
 import com.example.androidtest.locate.GpsActivity;
 import com.example.androidtest.material.MaterialActivity;
 import com.example.androidtest.storage.SharePreferenceActivity;
-import com.example.listview.ListViewActivity;
-import com.example.listview.RefreshListViewActivity;
-import com.example.viewpager.BackGroundColorAnimationActivity;
+import com.example.androidtest.listview.ListViewActivity;
+import com.example.androidtest.listview.RefreshListViewActivity;
+import com.example.androidtest.viewpager.BackGroundColorAnimationActivity;
 
 /**
  * Created by yangfeng on 2016/12/6.
@@ -84,6 +85,7 @@ public class DemoInfo {
             new DemoInfo("GLSurface 2", GlSurfaceActivity2.class),
             new DemoInfo("RecycleDemo", RecycleDemoActivity.class),
             new DemoInfo("QlcodeDemo", QlCodeActivity.class),
-            new DemoInfo("屏幕亮度", BrightnessActivity.class)
+            new DemoInfo("屏幕亮度", BrightnessActivity.class),
+            new DemoInfo("图片缩放", ZoomImageActivity.class)
     };
 }

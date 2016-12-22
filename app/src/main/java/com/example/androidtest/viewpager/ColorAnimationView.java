@@ -1,4 +1,4 @@
-package com.example.viewpager;
+package com.example.androidtest.viewpager;
 
 import android.animation.Animator;
 import android.animation.ArgbEvaluator;

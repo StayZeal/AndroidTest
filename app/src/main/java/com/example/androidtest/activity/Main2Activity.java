@@ -13,10 +13,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.adapter.MainAdapter;
+import com.example.androidtest.adapter.MainAdapter;
 import com.example.androidtest.MainActivity;
 import com.example.androidtest.R;
-import com.example.constant.DemoInfo;
+import com.example.androidtest.DemoInfo;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

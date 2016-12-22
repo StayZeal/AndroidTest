@@ -33,11 +33,14 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
-            <!--   <intent-filter>
+
+            <!--
+               <intent-filter>
                    <action android:name="android.intent.action.MAIN" />
 
                    <category android:name="android.intent.category.LAUNCHER" />
-               </intent-filter>-->
+               </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".activity.ZakerActivity"
@@ -49,10 +52,10 @@
             android:name=".activity.TestViewPagerActivity"
             android:label="@string/title_activity_test_view_pager" />
         <activity
-            android:name="com.example.viewpager.BackGroundColorAnimationActivity"
+            android:name=".viewpager.BackGroundColorAnimationActivity"
             android:label="@string/title_activity_test_zaker" />
         <activity
-            android:name="com.example.loadertest.LoaderTestActivity"
+            android:name=".loadertest.LoaderTestActivity"
             android:label="@string/title_activity_loader_test" />
         <activity
             android:name=".activity.ImageTranspaencyActivity"
@@ -67,7 +70,7 @@
             android:name=".activity.StartForResultActivity_B"
             android:label="@string/title_activity_start_for_result_activity__b" />
         <activity
-            android:name="com.example.listview.RefreshListViewActivity"
+            android:name=".listview.RefreshListViewActivity"
             android:label="@string/title_activity_refresh_list_view" />
         <activity
             android:name=".storage.SharePreferenceActivity"
@@ -92,7 +95,7 @@
             android:name=".activity.ScrollGridActivity"
             android:label="@string/title_activity_scroll_grid" />
         <activity
-            android:name="com.example.listview.ListViewActivity"
+            android:name=".listview.ListViewActivity"
             android:label="@string/title_activity_list_view" />
         <activity
             android:name=".activity.VideoViewActivity"
@@ -164,6 +167,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.ZoomImageActivity"></activity>
     </application>
 
 </manifest>

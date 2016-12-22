@@ -1,4 +1,4 @@
-package com.example.java;
+package com.example.androidtest.java;
 
 import java.util.ArrayList;
 import java.util.List;

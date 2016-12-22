@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" /> -->
     
-    <com.example.viewpager.ColorAnimationView
+    <com.example.androidtest.viewpager.ColorAnimationView
         android:id="@+id/ColorAnimationView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

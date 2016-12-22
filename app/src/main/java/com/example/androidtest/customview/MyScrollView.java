@@ -1,15 +1,17 @@
-package com.example.customview;
+package com.example.androidtest.customview;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Scroller;
 
 /**
  * Created by yangfeng on 2016/8/24.
  */
-public class MyScrollView2 extends LinearLayout {
+public class MyScrollView extends LinearLayout {
 
     private static final String TAG = "MyScrollView";
 
@@ -17,24 +19,25 @@ public class MyScrollView2 extends LinearLayout {
     private float lastDownY;
     private float currentY;
     private float moveY;
+    View v;
     private float startY;
 
-    public MyScrollView2(Context context) {
+    public MyScrollView(Context context) {
         super(context);
         initView(context);
     }
 
-    public MyScrollView2(Context context, AttributeSet attrs) {
+    public MyScrollView(Context context, AttributeSet attrs) {
         super(context, attrs);
         initView(context);
     }
 
-    public MyScrollView2(Context context, AttributeSet attrs, int defStyleAttr) {
+    public MyScrollView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView(context);
     }
 
-    public MyScrollView2(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public MyScrollView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         initView(context);
     }
@@ -44,11 +47,18 @@ public class MyScrollView2 extends LinearLayout {
         mScroller = new Scroller(context);
     }
 
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        return super.dispatchTouchEvent(ev);
+    }
+
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
 
+        Log.i(TAG,"onInterceptTouchEvent");
         switch (ev.getAction()){
-           /* case MotionEvent.ACTION_DOWN:
+            /*case MotionEvent.ACTION_DOWN:
                 mXDown = ev.getRawX();
                 mXLastMove = mXDown;
                 break;
@@ -64,11 +74,14 @@ public class MyScrollView2 extends LinearLayout {
         }
 
         return super.onInterceptTouchEvent(ev);
+//        return true;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
+        requestDisallowInterceptTouchEvent(true);
+        Log.i(TAG,"onTouchEvent");
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 lastDownY = event.getY();
@@ -79,6 +92,7 @@ public class MyScrollView2 extends LinearLayout {
                 currentY = event.getY();
                 moveY = currentY - lastDownY;
                 scrollTo(0, (int) (startY - moveY));
+                invalidate();
                 break;
             case MotionEvent.ACTION_UP:
                 currentY = event.getY();
@@ -87,8 +101,10 @@ public class MyScrollView2 extends LinearLayout {
                 break;
         }
 
-        return super.onTouchEvent(event);
+        return true;
+//        return super.onTouchEvent(event);
     }
+
 
     private void startBounceAnmi(int startY, int dy, int duration) {
 

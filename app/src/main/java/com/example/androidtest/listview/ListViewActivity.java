@@ -1,10 +1,9 @@
-package com.example.listview;
+package com.example.androidtest.listview;
 
 import com.example.androidtest.R;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;

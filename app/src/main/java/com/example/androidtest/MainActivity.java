@@ -11,8 +11,6 @@ import android.view.animation.Animation;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.constant.DemoInfo;
-
 import java.util.ArrayList;
 import java.util.List;
 

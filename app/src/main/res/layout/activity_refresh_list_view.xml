@@ -3,15 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     
-    tools:context="com.example.listview.RefreshListViewActivity" >
+    tools:context=".listview.RefreshListViewActivity" >
 
-     <com.example.listview.RefreshListView 
+     <com.example.androidtest.listview.RefreshListView
          android:id="@+id/refresh_listview"
          android:layout_width="match_parent"
          android:layout_height="match_parent"
          android:dividerHeight="4dp"
          >
          
-     </com.example.listview.RefreshListView>
+     </com.example.androidtest.listview.RefreshListView>
 
 </RelativeLayout>
