@@ -7,10 +7,9 @@ import com.example.androidtest.fragment.LifeFragment;
 
 import java.util.List;
 
-/**
- * Created by yangfeng on 2016/10/19.
- */
+
 public class VpAdaper2<T> extends BaseVPAdapter<T> {
+
 
 
     public VpAdaper2(FragmentManager fm, List<T> datalist) {

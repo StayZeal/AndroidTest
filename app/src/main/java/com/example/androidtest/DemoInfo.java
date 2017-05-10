@@ -5,13 +5,16 @@ import android.app.Activity;
 import com.example.androidtest.activity.BrightnessActivity;
 import com.example.androidtest.activity.CameraActivity;
 import com.example.androidtest.activity.ExecuteCommandActivity;
+import com.example.androidtest.activity.ExpandableActivity;
 import com.example.androidtest.activity.FrameLayoutOnClickActivity;
 import com.example.androidtest.activity.FullScreenActivity;
 import com.example.androidtest.activity.GetPhoneHeapSizeActivity;
 import com.example.androidtest.activity.GetSDPathActivity;
 import com.example.androidtest.activity.GlSurfaceActivity;
 import com.example.androidtest.activity.GlSurfaceActivity2;
+import com.example.androidtest.activity.ImageCacheActivity;
 import com.example.androidtest.activity.ImagePixelActivity;
+import com.example.androidtest.activity.ImageRelatedActivity;
 import com.example.androidtest.activity.ImageTranspaencyActivity;
 import com.example.androidtest.activity.IntentTestActivity;
 import com.example.androidtest.activity.LifecycleTestActivity;
@@ -37,9 +40,7 @@ import com.example.androidtest.listview.ListViewActivity;
 import com.example.androidtest.listview.RefreshListViewActivity;
 import com.example.androidtest.viewpager.BackGroundColorAnimationActivity;
 
-/**
- * Created by yangfeng on 2016/12/6.
- */
+
 public class DemoInfo {
     public final String title;
     public final Class<? extends Activity> actitity;
@@ -50,11 +51,11 @@ public class DemoInfo {
     }
 
     public static final DemoInfo[] demo = {
+            new DemoInfo("Image相关", ImageRelatedActivity.class),
             new DemoInfo("Zaker风格欢迎界面测试", TestZakerActivity.class),
             new DemoInfo("ViewPager全屏背景渐变",
                     BackGroundColorAnimationActivity.class),
-            new DemoInfo("Image透明", ImageTranspaencyActivity.class),
-            new DemoInfo("ImageView像素测试", ImagePixelActivity.class),
+
             new DemoInfo("startActivityForResult",
                     StartForResultActivity_A.class),
             new DemoInfo("下拉刷新ListView", RefreshListViewActivity.class),
@@ -86,6 +87,14 @@ public class DemoInfo {
             new DemoInfo("RecycleDemo", RecycleDemoActivity.class),
             new DemoInfo("QlcodeDemo", QlCodeActivity.class),
             new DemoInfo("屏幕亮度", BrightnessActivity.class),
-            new DemoInfo("图片缩放", ZoomImageActivity.class)
+            new DemoInfo("ExpandableList", ExpandableActivity.class),
+
+    };
+
+    public static final DemoInfo[] images = {
+            new DemoInfo("Image透明", ImageTranspaencyActivity.class),
+            new DemoInfo("ImageView像素测试", ImagePixelActivity.class),
+            new DemoInfo("图片缩放", ZoomImageActivity.class),
+            new DemoInfo("图片缓存", ImageCacheActivity.class),
     };
 }

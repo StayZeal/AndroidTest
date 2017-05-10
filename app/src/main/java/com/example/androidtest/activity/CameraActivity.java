@@ -26,6 +26,7 @@ public class CameraActivity extends AppCompatActivity {
     SurfaceView surfaceView;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

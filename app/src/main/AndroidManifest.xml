@@ -167,7 +167,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ZoomImageActivity"></activity>
+        <activity android:name=".activity.ZoomImageActivity" />
+        <activity android:name=".activity.ImageRelatedActivity" />
+        <activity android:name=".activity.ImageCacheActivity" />
+        <activity android:name=".activity.AidlServerActivity" />
+        <activity android:name=".activity.AidlClientActivity" />
+        <activity android:name=".activity.ExpandableActivity"></activity>
     </application>
 
 </manifest>
