@@ -1,8 +1,5 @@
 package com.example.androidtest.arithmetic;
 
-/**
- * Created by yangfeng on 2017/5/10.
- */
 
 public class BubbleSort {
 
