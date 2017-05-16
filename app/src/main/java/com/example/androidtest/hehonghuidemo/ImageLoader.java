@@ -8,9 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -20,6 +20,13 @@ public class ImageLoader {
     LruCache<String, Bitmap> mImageCache;
     ExecutorService mExecutorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
+    public Thread mThread;
+
+    private OnRefreshListener onRefreshListener;
+
+    public void setOnRefreshListener(OnRefreshListener onRefreshListener) {
+        this.onRefreshListener = onRefreshListener;
+    }
 
     public ImageLoader() {
         initImageCache();
@@ -52,12 +59,24 @@ public class ImageLoader {
                     Log.i(TAG, "imageView is:" + imageView.toString());
                     Log.i(TAG, "thread id before:" + Thread.currentThread().getId());
                     textView.setText("线程池中的数据");
+//                    if (Looper.myLooper() == Looper.getMainLooper())
                     imageView.setImageBitmap(bitmap);
+                    if (mThread == Thread.currentThread()) {
+
+                    } else {
+                        System.out.println("啦啦啦啦德玛西");
+                        throw new IllegalArgumentException("你必须在主线程调用该方法");
+                    }
+
                     Log.i(TAG, "thread id after:" + Thread.currentThread().getId());
                 }
                 bitmap.recycle();
                 mImageCache.put(url, bitmap);
                 Log.i(TAG, "thread id end");
+
+                if (onRefreshListener != null) {
+                    onRefreshListener.onComplete();
+                }
             }
         });
     }
@@ -66,7 +85,8 @@ public class ImageLoader {
         Bitmap bitmap = null;
         try {
             URL url = new URL(imageUrl);
-            final HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            final URLConnection conn = url.openConnection();
+//            final HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.connect();
             bitmap = BitmapFactory.decodeStream(conn.getInputStream());
         } catch (MalformedURLException e) {
@@ -78,5 +98,11 @@ public class ImageLoader {
 
         return bitmap;
     }
+
+
+    public interface OnRefreshListener {
+        void onComplete();
+    }
+
 
 }
