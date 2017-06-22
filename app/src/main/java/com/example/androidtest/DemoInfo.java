@@ -4,6 +4,8 @@ import android.app.Activity;
 
 import com.example.androidtest.activity.BrightnessActivity;
 import com.example.androidtest.activity.CameraActivity;
+import com.example.androidtest.activity.CustomViewActivity;
+import com.example.androidtest.activity.DpiTestActivity;
 import com.example.androidtest.activity.ExecuteCommandActivity;
 import com.example.androidtest.activity.ExpandableActivity;
 import com.example.androidtest.activity.FrameLayoutOnClickActivity;
@@ -14,15 +16,18 @@ import com.example.androidtest.activity.GlSurfaceActivity;
 import com.example.androidtest.activity.GlSurfaceActivity2;
 import com.example.androidtest.activity.ImageCacheActivity;
 import com.example.androidtest.activity.ImagePixelActivity;
-import com.example.androidtest.activity.ImageRelatedActivity;
+import com.example.androidtest.activity.LaunchSingleTopActivity;
+import com.example.androidtest.activity.MyListActivity;
 import com.example.androidtest.activity.ImageTranspaencyActivity;
 import com.example.androidtest.activity.IntentTestActivity;
 import com.example.androidtest.activity.LifecycleTestActivity;
+import com.example.androidtest.activity.PitChartActivity;
 import com.example.androidtest.activity.PopupWindowActivity;
 import com.example.androidtest.activity.QlCodeActivity;
 import com.example.androidtest.activity.RSAEncryptActivity;
 import com.example.androidtest.activity.RecycleDemoActivity;
 import com.example.androidtest.activity.ScrollActivity;
+import com.example.androidtest.activity.Scrolling2Activity;
 import com.example.androidtest.activity.ScrollingActivity;
 import com.example.androidtest.activity.StartForResultActivity_A;
 import com.example.androidtest.activity.TestZakerActivity;
@@ -51,7 +56,9 @@ public class DemoInfo {
     }
 
     public static final DemoInfo[] demo = {
-            new DemoInfo("Image相关", ImageRelatedActivity.class),
+
+            new DemoInfo("Activity启动模式", LaunchSingleTopActivity.class),
+            new DemoInfo("Image相关", MyListActivity.class),
             new DemoInfo("Zaker风格欢迎界面测试", TestZakerActivity.class),
             new DemoInfo("ViewPager全屏背景渐变",
                     BackGroundColorAnimationActivity.class),
@@ -88,10 +95,14 @@ public class DemoInfo {
             new DemoInfo("QlcodeDemo", QlCodeActivity.class),
             new DemoInfo("屏幕亮度", BrightnessActivity.class),
             new DemoInfo("ExpandableList", ExpandableActivity.class),
+            new DemoInfo("PieChart", PitChartActivity.class),
+            new DemoInfo("CustomView", CustomViewActivity.class),
 
     };
 
     public static final DemoInfo[] images = {
+            new DemoInfo("Scrolling2Activity", Scrolling2Activity.class),
+            new DemoInfo("DpiTest", DpiTestActivity.class),
             new DemoInfo("Image透明", ImageTranspaencyActivity.class),
             new DemoInfo("ImageView像素测试", ImagePixelActivity.class),
             new DemoInfo("图片缩放", ZoomImageActivity.class),

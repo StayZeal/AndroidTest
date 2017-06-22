@@ -49,9 +49,6 @@
             android:name=".activity.TestZakerActivity"
             android:label="@string/title_activity_test_zaker" />
         <activity
-            android:name=".activity.TestViewPagerActivity"
-            android:label="@string/title_activity_test_view_pager" />
-        <activity
             android:name=".viewpager.BackGroundColorAnimationActivity"
             android:label="@string/title_activity_test_zaker" />
         <activity
@@ -160,19 +157,58 @@
         <activity android:name=".activity.QlCodeActivity" />
         <activity android:name=".activity.LifecycleTestActivity2" />
         <activity android:name=".activity.BrightnessActivity" />
+        <activity android:name=".activity.ZoomImageActivity" />
+        <activity android:name=".activity.MyListActivity" />
+        <activity
+            android:name=".activity.ImageCacheActivity"
+            android:label="ImageCache">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".activity.AidlServerActivity" />
+        <activity android:name=".activity.AidlClientActivity" />
+        <activity android:name=".activity.ExpandableActivity" />
+        <activity
+            android:name=".activity.LaunchSingleTopActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activity.LaunchStandardActivity"
+            android:label="@string/title_activity_launch_mode1" />
+        <activity
+            android:name=".activity.LaunchSingleInstanceActivity"
+            android:label="@string/title_activity_launch_mode2"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.LaunchSingleTaskActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".activity.Main2Activity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".activity.DpiTestActivity" />
+        <activity
+            android:name=".activity.Scrolling2Activity"
+            android:label="@string/title_activity_scrolling2"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.Main3Activity" />
+        <activity android:name=".activity.PitChartActivity" />
+        <activity android:name=".activity.CustomViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.ZoomImageActivity" />
-        <activity android:name=".activity.ImageRelatedActivity" />
-        <activity android:name=".activity.ImageCacheActivity" />
-        <activity android:name=".activity.AidlServerActivity" />
-        <activity android:name=".activity.AidlClientActivity" />
-        <activity android:name=".activity.ExpandableActivity"></activity>
     </application>
 
 </manifest>

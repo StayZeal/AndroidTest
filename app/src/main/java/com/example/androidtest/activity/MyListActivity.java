@@ -12,7 +12,7 @@ import com.example.androidtest.adapter.MainAdapter;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class ImageRelatedActivity extends AppCompatActivity {
+public class MyListActivity extends AppCompatActivity {
 
 
     @Bind(R.id.image_related_Rv)

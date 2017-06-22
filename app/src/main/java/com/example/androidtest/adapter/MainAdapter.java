@@ -32,21 +32,6 @@ public class MainAdapter extends RecyclerView.Adapter {
         View v = LayoutInflater.from(mContext).inflate(R.layout.item_main_list, parent, false);
         final ViewHolder viewHolder = new ViewHolder(v);
 
-        /**
-         *  放在此处为-1
-         */
-//        final int postion = viewHolder.getAdapterPosition();
-        viewHolder.title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final int postion = viewHolder.getAdapterPosition();
-                Intent intent = new Intent(mContext, datas[postion].actitity);
-                mContext.startActivity(intent);
-//                Toast.makeText(mContext, "llllllllllll", Toast.LENGTH_SHORT).show();
-
-
-            }
-        });
         return viewHolder;
 
     }
@@ -61,6 +46,15 @@ public class MainAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ViewHolder viewHolder = (ViewHolder) holder;
         viewHolder.title.setText(datas[position].title);
+
+        final int  pos = position;
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, datas[pos].actitity);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override

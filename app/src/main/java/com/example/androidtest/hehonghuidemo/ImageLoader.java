@@ -61,14 +61,14 @@ public class ImageLoader {
                     textView.setText("线程池中的数据");
 //                    if (Looper.myLooper() == Looper.getMainLooper())
                     imageView.setImageBitmap(bitmap);
-                    if (mThread == Thread.currentThread()) {
-
-                    } else {
+//                    if (mThread == Thread.currentThread()) {
+//
+//                    } else {
                         System.out.println("啦啦啦啦德玛西");
                         throw new IllegalArgumentException("你必须在主线程调用该方法");
-                    }
+//                    }
 
-                    Log.i(TAG, "thread id after:" + Thread.currentThread().getId());
+//                    Log.i(TAG, "thread id after:" + Thread.currentThread().getId());
                 }
                 bitmap.recycle();
                 mImageCache.put(url, bitmap);

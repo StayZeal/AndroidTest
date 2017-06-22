@@ -1,9 +1,10 @@
 package com.example.androidtest.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,7 +16,7 @@ import com.example.androidtest.hehonghuidemo.ImageLoader;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class ImageCacheActivity extends AppCompatActivity {
+public class ImageCacheActivity extends AppCompatActivity implements ImageLoader.OnRefreshListener {
 
     private static final String TAG = "ImageCacheActivity";
     ImageLoader imageLoader;
@@ -29,6 +30,10 @@ public class ImageCacheActivity extends AppCompatActivity {
     ViewGroup c;
     @Bind(R.id.title)
     TextView title;
+    @Bind(R.id.title2)
+    TextView title2;
+    @Bind(R.id.refresh_layout)
+    SwipeRefreshLayout refreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +48,61 @@ public class ImageCacheActivity extends AppCompatActivity {
         init();
         Log.i(TAG, "imageView is:" + imageView.toString());
         Log.i(TAG, "thread id:" + Thread.currentThread().getId());
-        imageLoader.displayImage(url, imageView,title);
+        imageLoader.mThread = Thread.currentThread();
+        imageLoader.setOnRefreshListener(this);
+        imageLoader.displayImage(url, imageView, title);
+
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                imageLoader.displayImage(url, imageView, title);
+            }
+        });
+
+        View s;
+
+//        new Thread(new Test(title2)).start();
+
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    System.out.println("new thread id:" + Thread.currentThread().getId());
+                    Thread.sleep(1000);
+                    title2.setText("new thread set textview");
+//                } catch (RuntimeException e) {
+//                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
 //        new ImageUtil().displayImage(url,imageView);
 
-        Snackbar s;
+    }
+
+    class Test implements Runnable {
+
+        private TextView textView;
+
+        public Test(TextView textView) {
+            this.textView = textView;
+        }
+
+        @Override
+        public void run() {
+            try {
+                System.out.println("new thread id:" + Thread.currentThread().getId());
+                Thread.sleep(1000);
+                textView.setText("new thread set textview");
+            } catch (RuntimeException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 
@@ -58,5 +114,10 @@ public class ImageCacheActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.i(TAG, "onDestroy");
+    }
+
+    @Override
+    public void onComplete() {
+        refreshLayout.setRefreshing(false);
     }
 }
