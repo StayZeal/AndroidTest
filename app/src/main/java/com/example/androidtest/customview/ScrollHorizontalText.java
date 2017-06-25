@@ -100,6 +100,7 @@ public class ScrollHorizontalText extends View {
             if (offsetY < mRect.height())
                 offsetY = mRect.height();
 
+//            canvas.drawText(currentContent, offsetX, 200, mPaint);
             canvas.drawText(currentContent, offsetX, offsetY, mPaint);
             offsetX += mRect.width() + textSpace;
 
