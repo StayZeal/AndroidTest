@@ -35,6 +35,7 @@ import com.example.androidtest.activity.TransparentActivity;
 import com.example.androidtest.activity.VideoViewActivity;
 import com.example.androidtest.activity.VolleyActivity;
 import com.example.androidtest.activity.ZoomImageActivity;
+import com.example.androidtest.animate.AnimationListActivity;
 import com.example.androidtest.charge.ChargeActivity;
 import com.example.androidtest.display.DisplayActivity;
 import com.example.androidtest.intent.IntentActivity1;
@@ -57,6 +58,7 @@ public class DemoInfo {
 
     public static final DemoInfo[] demo = {
 
+            new DemoInfo("动画", AnimationListActivity.class),
             new DemoInfo("Activity启动模式", LaunchSingleTopActivity.class),
             new DemoInfo("Image相关", MyListActivity.class),
             new DemoInfo("Zaker风格欢迎界面测试", TestZakerActivity.class),
