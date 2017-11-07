@@ -1,6 +1,8 @@
 package com.example.androidtest.arithmetic;
 
-
+/**
+ * 插入排序
+ */
 public class InsertSort extends BaseSort {
 
     public static void main(String[] args) {

@@ -65,7 +65,43 @@ public class Demo1 {
                 break;
             }
         }
-
-
     }
+
+    /**
+     * 方法二：当字符串是流水字符串的时候，
+     * 也就是字符串只能访问一次的时候，
+     * 我们的标数组就应该保存字符串的小标了。
+     *
+     *
+     * 字符串只遍历一次
+     * @param tag
+     */
+    public static void func2(String tag){
+        int[] flag = new int[256];
+        for (int i = 0; i < flag.length; i++) {
+            flag[i] = -1;
+        }
+        for (int i = 0; i < tag.length(); i++) {
+            int index = tag.charAt(i);
+            if (flag[index]  >= 0) {
+                flag[index] = -2;//所有出现两次
+            }else if(flag[index] == -1){
+                flag[index] = i;//记录字符串只出现一次的位置.
+            }
+        }
+        int min = 256;
+        /**
+         * 判断哪个第一次出现的字母最靠前
+         */
+        for (int i = 0; i < flag.length; i++) {
+            if (flag[i] < 0) {
+                continue;
+            }
+            if (min > flag[i]) {
+                min = flag[i];
+            }
+        }
+        System.out.println(tag.charAt(min));
+    }
+
 }

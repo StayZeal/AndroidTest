@@ -9,6 +9,7 @@ import java.util.Stack;
  */
 public class ReverseStackUsingRecursive {
 
+
     public static void reverse(Stack<Integer> stack) {
         if (stack.isEmpty()) {
             return;
@@ -34,20 +35,20 @@ public class ReverseStackUsingRecursive {
     public static int getAndRemoveLastElement(Stack<Integer> stack) {
         int result = stack.pop();
         if (stack.isEmpty()) {
-            System.out.println("栈顶：result:" + result);
-            for (int j = 0; j < stack.size(); j++) {
-                System.out.print(stack.get(j));
-            }
-            System.out.println();
+//            System.out.println("栈顶：result:" + result);
+//            for (int j = 0; j < stack.size(); j++) {
+//                System.out.print(stack.get(j));
+//            }
+//            System.out.println();
             return result;
         } else {
             int last = getAndRemoveLastElement(stack);
             stack.push(result);
-            System.out.println("last:" + last);
-            for (int j = 0; j < stack.size(); j++) {
-                System.out.print(stack.get(j));
-            }
-            System.out.println();
+//            System.out.println("last:" + last);
+//            for (int j = 0; j < stack.size(); j++) {
+//                System.out.print(stack.get(j));
+//            }
+//            System.out.println();
             return last;
         }
     }
@@ -61,11 +62,18 @@ public class ReverseStackUsingRecursive {
         test.push(5);
         for (int j = 0; j < test.size(); j++) {
             System.out.print(test.get(j));
+//            System.out.print(test.get(j));
+
         }
-        System.out.println();
+        System.out.println(" start...");
         reverse(test);
-        while (!test.isEmpty()) {
-            System.out.println(test.pop());
+//        while (!test.isEmpty()) {
+//            System.out.println(test.pop());
+//        }
+
+        System.out.print("result: ");
+        for (int j = 0; j < test.size(); j++) {
+            System.out.print(test.get(j));
         }
 
     }

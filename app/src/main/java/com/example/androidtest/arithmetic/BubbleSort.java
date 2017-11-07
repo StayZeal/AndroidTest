@@ -1,6 +1,8 @@
 package com.example.androidtest.arithmetic;
 
-
+/**
+ * 冒泡排序
+ */
 public class BubbleSort {
 
     private int[] array = {1, 3, 8, 9, 0, 1, 2, 4, 9, 5, 4, 3, 1};

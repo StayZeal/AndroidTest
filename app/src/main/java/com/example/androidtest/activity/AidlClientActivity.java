@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import com.example.androidtest.R;
 
+import dalvik.system.PathClassLoader;
+
 public class AidlClientActivity extends AppCompatActivity {
 
     @Override
@@ -16,5 +18,9 @@ public class AidlClientActivity extends AppCompatActivity {
 
         Button mButton = null;
         ObjectAnimator.ofInt(mButton, "width", 500).setDuration(5000).start();
+
+
+        System.loadLibrary("");
+        PathClassLoader pathClassLoader;
     }
 }

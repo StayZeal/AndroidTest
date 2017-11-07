@@ -1,0 +1,20 @@
+c:
+1: 3
+2: -2
+///////////
+1 2 3 4 5
+1245 3
+245 1
+24 5
+4 2
+4
+//tcp
+  server(send) client(receive)
+1、server(syn)-->client(syn)
+2、client(syn+1、ack)-->server(syn+1,ack)
+3、server(syn+1、ack+1)-->client
+client 通知server要䂮
+
+1、client 通知server要建立连接，server收到连接，但是client不知道服务端是否收到，所以进行第二步
+2、server 向client发送确认收到client的连接请求，lient收到连接，但是server不知道client是否收到自己得确认，所以进行第三步。" +
+3、client告诉server已经收到确认包
