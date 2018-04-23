@@ -10,6 +10,19 @@ import java.util.Stack;
 public class ReverseStackUsingRecursive {
 
 
+    /**
+     * i = 1
+     * i = 2
+     * ...
+     * i = 5 stack 5
+     * i = 4 stack 5 4
+     * i = 3 stack 5 4 3
+     * i = 2 stack 5 4 3 2
+     * i = 1 stack 5 4 3 2 1
+     *
+     *
+     * @param stack
+     */
     public static void reverse(Stack<Integer> stack) {
         if (stack.isEmpty()) {
             return;
@@ -28,6 +41,11 @@ public class ReverseStackUsingRecursive {
 
     /**
      * 这个函数就是删除栈底元素并返回这个元素
+     * result = 1 return 1;
+     * last = 1 stack 2 return 1;
+     * last = 1 stack 2 3 return 1;
+     * last = 1 stack 2 3 4 return 1;
+     * last = 1 stack 2 3 4 5 return 1;
      *
      * @param stack
      * @return
@@ -78,4 +96,7 @@ public class ReverseStackUsingRecursive {
 
     }
 
+
 }
+
+

@@ -9,13 +9,13 @@ import com.example.androidtest.DemoInfo;
 import com.example.androidtest.R;
 import com.example.androidtest.adapter.MainAdapter;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MyListActivity extends AppCompatActivity {
 
 
-    @Bind(R.id.image_related_Rv)
+    @BindView(R.id.image_related_Rv)
     RecyclerView imageRelatedRv;
     private MainAdapter mAdapter;
 

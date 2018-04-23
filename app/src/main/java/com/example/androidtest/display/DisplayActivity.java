@@ -26,7 +26,7 @@ public class DisplayActivity extends Activity {
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
-        currentDp.setText("Dip:" + metrics.density+"desityDpi: "+metrics.densityDpi + " width:" + metrics.widthPixels + "px,height:" + metrics.heightPixels + "px");
+        currentDp.setText("Dip:" + metrics.density+" desityDpi: "+metrics.densityDpi + " width:" + metrics.widthPixels + "px,height:" + metrics.heightPixels + "px");
 
     }
 

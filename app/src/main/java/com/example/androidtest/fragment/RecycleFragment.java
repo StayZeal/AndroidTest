@@ -15,14 +15,14 @@ import com.example.androidtest.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
 public class RecycleFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    @Bind(R.id.recycle_view)
+    @BindView(R.id.recycle_view)
     RecyclerView recycleView;
     RecyclerView.Adapter mAdapter;
 
@@ -65,7 +65,6 @@ public class RecycleFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
 
     }
 
@@ -110,8 +109,8 @@ public class RecycleFragment extends Fragment {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        //        @Bind(R.id.title)
-        @Bind(android.R.id.text1)
+        //        @BindView(R.id.title)
+        @BindView(android.R.id.text1)
         TextView content;
 
         public ViewHolder(View itemView) {

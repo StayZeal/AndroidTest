@@ -12,16 +12,16 @@ import com.example.androidtest.R;
 import com.example.androidtest.adapter.VpAdaper2;
 import com.example.androidtest.broadcastReceiver.PowerReceiver;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class LifecycleTestActivity extends AppCompatActivity {
 
     private static final String TAG = "LifecycleTestActivity";
     PowerReceiver mPowerReceiver;
-    @Bind(R.id.button)
+    @BindView(R.id.button)
     Button button;
-    @Bind(R.id.view_pager)
+    @BindView(R.id.view_pager)
     ViewPager viewPager;
 
     @Override

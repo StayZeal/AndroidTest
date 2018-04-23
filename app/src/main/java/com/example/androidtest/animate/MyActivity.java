@@ -11,15 +11,15 @@ import com.example.androidtest.R;
 import com.example.androidtest.animateview.MyView;
 import com.example.androidtest.arithmetic.TecentOsView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MyActivity extends AppCompatActivity {
 
     private static final String TAG = "MyActivity";
-    @Bind(R.id.my_view)
+    @BindView(R.id.my_view)
     MyView myView;
-    @Bind(R.id.tecent_os_view)
+    @BindView(R.id.tecent_os_view)
     TecentOsView tecentOsView;
 
 

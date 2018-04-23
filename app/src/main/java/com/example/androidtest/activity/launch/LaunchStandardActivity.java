@@ -1,4 +1,4 @@
-package com.example.androidtest.activity;
+package com.example.androidtest.activity.launch;
 
 import android.content.Context;
 import android.content.Intent;

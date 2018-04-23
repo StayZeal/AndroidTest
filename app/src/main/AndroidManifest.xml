@@ -176,18 +176,18 @@
         <activity android:name=".activity.AidlClientActivity" />
         <activity android:name=".activity.ExpandableActivity" />
         <activity
-            android:name=".activity.LaunchSingleTopActivity"
+            android:name=".activity.launch.LaunchSingleTopActivity"
             android:launchMode="singleTop" />
         <activity
-            android:name=".activity.LaunchStandardActivity"
+            android:name=".activity.launch.LaunchStandardActivity"
             android:label="@string/title_activity_launch_mode1" />
         <activity
-            android:name=".activity.LaunchSingleInstanceActivity"
+            android:name=".activity.launch.LaunchSingleInstanceActivity"
             android:label="@string/title_activity_launch_mode2"
             android:launchMode="singleInstance"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".activity.LaunchSingleTaskActivity"
+            android:name=".activity.launch.LaunchSingleTaskActivity"
             android:launchMode="singleTask" />
         <activity android:name=".activity.Main2Activity">
             <intent-filter>
@@ -223,8 +223,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-     <!--   <activity android:name="com.hook.HookActivity"
-            android:screenOrientation="portrait"></activity>-->
+        <!--
+            <activity android:name="com.hook.HookActivity"
+            android:screenOrientation="portrait"></activity>
+        -->
+        <activity android:name=".activity.launch.FlagIntentActivity"></activity>
+        <activity android:name=".activity.launch.FlagIntentActivity2"></activity>
     </application>
 
 </manifest>

@@ -27,28 +27,23 @@
 
 
         <Button
-            android:id="@+id/standard"
+            android:id="@+id/new_task"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="standard" />
+            android:text="FLAG_ACTIVITY_NEW_TASK" />
 
         <Button
-            android:id="@+id/singleTop"
+            android:id="@+id/single_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="singleTop" />
+            android:text="FLAG_ACTIVITY_SINGLE_TOP" />
 
         <Button
-            android:id="@+id/singleTask"
+            android:id="@+id/clear_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="singleTask" />
+            android:text="FLAG_ACTIVITY_CLEAR_TOP" />
 
-        <Button
-            android:id="@+id/singleInstance"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="singleInstance" />
 
     </LinearLayout>
 

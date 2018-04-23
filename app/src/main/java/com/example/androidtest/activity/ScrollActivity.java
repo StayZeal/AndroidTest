@@ -18,17 +18,17 @@ import com.example.androidtest.adapter.BaseVPAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ScrollActivity extends AppCompatActivity {
 
     private static final String TAG = "TransparentActivity";
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.title_image)
+    @BindView(R.id.title_image)
     ImageView titleImage;
-    @Bind(R.id.view_pager)
+    @BindView(R.id.view_pager)
     ViewPager viewPager;
     private GestureDetectorCompat mDetector;
 

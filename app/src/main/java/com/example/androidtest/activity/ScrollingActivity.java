@@ -22,27 +22,27 @@ import com.example.androidtest.adapter.BaseVPAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ScrollingActivity extends AppCompatActivity {
 
-    @Bind(R.id.action_bar_bg)
+    @BindView(R.id.action_bar_bg)
     ImageView actionBarBg;
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.toolbar_layout)
+    @BindView(R.id.toolbar_layout)
     CollapsingToolbarLayout toolbarLayout;
-    @Bind(R.id.app_bar)
+    @BindView(R.id.app_bar)
     AppBarLayout appBar;
-    @Bind(R.id.fab)
+    @BindView(R.id.fab)
     FloatingActionButton fab;
 
-    @Bind(R.id.view_pager)
+    @BindView(R.id.view_pager)
     ViewPager viewPager;
-    @Bind(R.id.tablayout)
+    @BindView(R.id.tablayout)
     TabLayout tablayout;
-    /*    @Bind(R.id.listview)
+    /*    @BindView(R.id.listview)
         ListView listview;*/
     private BaseVPAdapter<String> mVpAdapter;
 

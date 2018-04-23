@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.example.androidtest.DemoInfo;
 import com.example.androidtest.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -63,7 +63,7 @@ public class MainAdapter extends RecyclerView.Adapter {
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.item_Tv)
+        @BindView(R.id.item_Tv)
         TextView title;
 
         ViewHolder(View view) {

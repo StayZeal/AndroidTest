@@ -14,41 +14,41 @@ import com.example.androidtest.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class DpiTestActivity extends AppCompatActivity {
 
 
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.dpi_Tv)
+    @BindView(R.id.dpi_Tv)
     TextView dpiTv;
-    @Bind(R.id.dpi)
+    @BindView(R.id.dpi)
     ImageView dpi;
-    @Bind(R.id.mdpi_Tv)
+    @BindView(R.id.mdpi_Tv)
     TextView mdpiTv;
-    @Bind(R.id.mdpi)
+    @BindView(R.id.mdpi)
     ImageView mdpi;
-    @Bind(R.id.hdpi_Tv)
+    @BindView(R.id.hdpi_Tv)
     TextView hdpiTv;
-    @Bind(R.id.hdpi)
+    @BindView(R.id.hdpi)
     ImageView hdpi;
-    @Bind(R.id.nodpi_Tv)
+    @BindView(R.id.nodpi_Tv)
     TextView nodpiTv;
-    @Bind(R.id.nodpi)
+    @BindView(R.id.nodpi)
     ImageView nodpi;
-    @Bind(R.id.xhdpi_Tv)
+    @BindView(R.id.xhdpi_Tv)
     TextView xhdpiTv;
-    @Bind(R.id.xhdpi)
+    @BindView(R.id.xhdpi)
     ImageView xhdpi;
-    @Bind(R.id.xxhdpi_Tv)
+    @BindView(R.id.xxhdpi_Tv)
     TextView xxhdpiTv;
-    @Bind(R.id.xxhdpi)
+    @BindView(R.id.xxhdpi)
     ImageView xxhdpi;
-    @Bind(R.id.xxxhdpi_Tv)
+    @BindView(R.id.xxxhdpi_Tv)
     TextView xxxhdpiTv;
-    @Bind(R.id.xxxhdpi)
+    @BindView(R.id.xxxhdpi)
     ImageView xxxhdpi;
 
 

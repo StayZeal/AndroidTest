@@ -10,17 +10,17 @@ import android.widget.TextView;
 
 import com.example.androidtest.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MaterialActivity extends Activity {
 
     private static final String TAG = "MaterialActivity";
-    @Bind(R.id.info_text)
+    @BindView(R.id.info_text)
     TextView infoText;
-    @Bind(R.id.card_view)
+    @BindView(R.id.card_view)
     CardView cardView;
-    @Bind(R.id.seek_bar)
+    @BindView(R.id.seek_bar)
     SeekBar seekBar;
 
     @Override

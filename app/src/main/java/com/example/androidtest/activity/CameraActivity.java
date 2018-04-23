@@ -11,15 +11,15 @@ import android.widget.FrameLayout;
 import com.example.androidtest.R;
 import com.example.androidtest.customview.Preview;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class CameraActivity extends AppCompatActivity {
 
     private static final String TAG = "CameraActivity";
-    @Bind(R.id.camerea_preview)
+    @BindView(R.id.camerea_preview)
     Preview mPreview;
-    @Bind(R.id.framlayout)
+    @BindView(R.id.framlayout)
     FrameLayout framlayout;
     private Camera mCamera;
     SurfaceHolder surfaceHolder;

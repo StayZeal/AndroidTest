@@ -7,12 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import com.example.androidtest.R;
 import com.example.androidtest.customview.PieChart;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class PitChartActivity extends AppCompatActivity {
 
-    @Bind(R.id.Pie)
+    @BindView(R.id.Pie)
     PieChart pie;
 
     @Override

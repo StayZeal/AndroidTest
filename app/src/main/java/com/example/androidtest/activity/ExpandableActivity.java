@@ -11,12 +11,12 @@ import android.widget.ExpandableListView;
 
 import com.example.androidtest.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ExpandableActivity extends AppCompatActivity {
 
-    @Bind(R.id.expandable_list)
+    @BindView(R.id.expandable_list)
     ExpandableListView expandableList;
 
     @Override

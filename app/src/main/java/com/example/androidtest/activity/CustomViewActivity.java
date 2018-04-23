@@ -10,12 +10,12 @@ import com.example.androidtest.customview.ScrollHorizontalText;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class CustomViewActivity extends AppCompatActivity {
 
-    @Bind(R.id.custom_view)
+    @BindView(R.id.custom_view)
     ScrollHorizontalText customView;
 
     List<String> strings = new ArrayList<>();

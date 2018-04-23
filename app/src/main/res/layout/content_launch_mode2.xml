@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.androidtest.activity.LaunchSingleInstanceActivity"
+    tools:context="com.example.androidtest.activity.launch.LaunchSingleInstanceActivity"
     tools:showIn="@layout/app_bar_launch_mode2">
 
     <TextView

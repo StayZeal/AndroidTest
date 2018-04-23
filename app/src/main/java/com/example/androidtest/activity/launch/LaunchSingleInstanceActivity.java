@@ -1,4 +1,4 @@
-package com.example.androidtest.activity;
+package com.example.androidtest.activity.launch;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

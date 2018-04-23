@@ -16,11 +16,12 @@ import com.example.androidtest.activity.GlSurfaceActivity;
 import com.example.androidtest.activity.GlSurfaceActivity2;
 import com.example.androidtest.activity.ImageCacheActivity;
 import com.example.androidtest.activity.ImagePixelActivity;
-import com.example.androidtest.activity.LaunchSingleTopActivity;
-import com.example.androidtest.activity.MyListActivity;
 import com.example.androidtest.activity.ImageTranspaencyActivity;
 import com.example.androidtest.activity.IntentTestActivity;
+import com.example.androidtest.activity.launch.FlagIntentActivity;
+import com.example.androidtest.activity.launch.LaunchStandardActivity;
 import com.example.androidtest.activity.LifecycleTestActivity;
+import com.example.androidtest.activity.MyListActivity;
 import com.example.androidtest.activity.PitChartActivity;
 import com.example.androidtest.activity.PopupWindowActivity;
 import com.example.androidtest.activity.QlCodeActivity;
@@ -39,11 +40,11 @@ import com.example.androidtest.animate.AnimationListActivity;
 import com.example.androidtest.charge.ChargeActivity;
 import com.example.androidtest.display.DisplayActivity;
 import com.example.androidtest.intent.IntentActivity1;
+import com.example.androidtest.listview.ListViewActivity;
+import com.example.androidtest.listview.RefreshListViewActivity;
 import com.example.androidtest.locate.GpsActivity;
 import com.example.androidtest.material.MaterialActivity;
 import com.example.androidtest.storage.SharePreferenceActivity;
-import com.example.androidtest.listview.ListViewActivity;
-import com.example.androidtest.listview.RefreshListViewActivity;
 import com.example.androidtest.viewpager.BackGroundColorAnimationActivity;
 
 
@@ -59,7 +60,8 @@ public class DemoInfo {
     public static final DemoInfo[] demo = {
 
             new DemoInfo("动画", AnimationListActivity.class),
-            new DemoInfo("Activity启动模式", LaunchSingleTopActivity.class),
+            new DemoInfo("Activity启动模式", LaunchStandardActivity.class),
+            new DemoInfo("Activity启动模式Flag", FlagIntentActivity.class),
             new DemoInfo("Image相关", MyListActivity.class),
             new DemoInfo("Zaker风格欢迎界面测试", TestZakerActivity.class),
             new DemoInfo("ViewPager全屏背景渐变",

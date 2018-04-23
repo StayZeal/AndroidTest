@@ -9,12 +9,12 @@ import android.widget.LinearLayout;
 import com.example.androidtest.R;
 import com.example.androidtest.customview.ZoomImageView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ZoomImageActivity extends AppCompatActivity {
 
-    @Bind(R.id.zoom_Iv)
+    @BindView(R.id.zoom_Iv)
     ZoomImageView zoomIv;
 
     LinearLayout ll;

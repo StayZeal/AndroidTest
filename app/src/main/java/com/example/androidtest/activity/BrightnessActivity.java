@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.example.androidtest.BuildConfig;
 import com.example.androidtest.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -27,19 +27,19 @@ public class BrightnessActivity extends AppCompatActivity {
 
     private static final String TAG = "BrightnessActivity";
     Window window;
-    @Bind(R.id.default_Btn)
+    @BindView(R.id.default_Btn)
     Button defaultBtn;
-    @Bind(R.id.max_Btn)
+    @BindView(R.id.max_Btn)
     Button maxBtn;
-    @Bind(R.id.exchange_Sb)
+    @BindView(R.id.exchange_Sb)
     SeekBar exchangeSb;
-    @Bind(R.id.screen_brightness_Tv)
+    @BindView(R.id.screen_brightness_Tv)
     TextView screenBrightnessTv;
-    @Bind(R.id.activity_Rb)
+    @BindView(R.id.activity_Rb)
     RadioButton activityRb;
-    @Bind(R.id.system_Rb)
+    @BindView(R.id.system_Rb)
     RadioButton systemRb;
-    @Bind(R.id.radio_group)
+    @BindView(R.id.radio_group)
     RadioGroup radioGroup;
     private WindowManager.LayoutParams mParams;
     private int screenBrightness;

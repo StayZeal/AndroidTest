@@ -13,12 +13,12 @@ import com.example.androidtest.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class RecycleDemoActivity extends AppCompatActivity {
 
-    @Bind(R.id.list)
+    @BindView(R.id.list)
     ListView list;
     ArrayAdapter<String> mAdapter;
 

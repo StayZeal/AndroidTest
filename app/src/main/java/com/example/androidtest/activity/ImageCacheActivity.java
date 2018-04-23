@@ -17,26 +17,26 @@ import com.bumptech.glide.request.target.ViewTarget;
 import com.example.androidtest.R;
 import com.example.androidtest.hehonghuidemo.ImageLoader;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ImageCacheActivity extends AppCompatActivity implements ImageLoader.OnRefreshListener {
 
     private static final String TAG = "ImageCacheActivity";
     ImageLoader imageLoader;
-    @Bind(R.id.image_view)
+    @BindView(R.id.image_view)
     ImageView imageView;
 
     String url = "http://i-3.yxdown.com/2015/10/22/b6f85c77-2ae4-4480-a4de-e97cdc270e74.jpg";
-    @Bind(R.id.glide_image)
+    @BindView(R.id.glide_image)
     ImageView glideImage;
 
     ViewGroup c;
-    @Bind(R.id.title)
+    @BindView(R.id.title)
     TextView title;
-    @Bind(R.id.title2)
+    @BindView(R.id.title2)
     TextView title2;
-    @Bind(R.id.refresh_layout)
+    @BindView(R.id.refresh_layout)
     SwipeRefreshLayout refreshLayout;
 
     Bitmap bitmap;

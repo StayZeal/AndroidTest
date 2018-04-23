@@ -1,4 +1,4 @@
-package com.example.androidtest.activity;
+package com.example.androidtest.activity.launch;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,10 +10,6 @@ import android.view.View;
 import com.example.androidtest.R;
 
 import butterknife.OnClick;
-
-/**
- * Created by yangfeng on 2017/5/12.
- */
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -39,6 +35,7 @@ public class BaseActivity extends AppCompatActivity {
 
         StringBuilder sb = new StringBuilder();
         sb.append(" taskId:" + getTaskId() + " ");
+
         return sb.toString();
     }
 

@@ -18,20 +18,20 @@ import com.example.androidtest.MainActivity;
 import com.example.androidtest.R;
 import com.example.androidtest.DemoInfo;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class Main2Activity extends AppCompatActivity {
 
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    //    @Bind(R.id.menu)
+    //    @BindView(R.id.menu)
 //    TextView menu;
-    @Bind(R.id.main_Rv)
+    @BindView(R.id.main_Rv)
     RecyclerView mainRv;
-    @Bind(R.id.nav_view)
+    @BindView(R.id.nav_view)
     NavigationView navView;
-    @Bind(R.id.drawer_layout)
+    @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
 
     private MainAdapter mAdapter;

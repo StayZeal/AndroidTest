@@ -4,6 +4,7 @@ package com.example.androidtest.arithmetic;
  * 选择排序
  * 时间复杂度O(n^2)
  * 空间复杂度O(n)
+ * 每次找到剩余数里面的最大值或者最小值
  */
 public class SelectionSort {
 
@@ -20,7 +21,7 @@ public class SelectionSort {
 
         for (int i = 0, k = 0; i < size; i++, k = i) {
             for (int j = i + 1; j < size; j++) {
-                if (array[k] > array[j]) {
+                if (array[k] > array[j]) {//找到最小值
                     k = j;
                 }
             }
