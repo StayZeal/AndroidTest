@@ -19,20 +19,33 @@ public class MyListActivity extends AppCompatActivity {
     RecyclerView imageRelatedRv;
     private MainAdapter mAdapter;
 
+    DemoInfo.Params params;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image_related);
         ButterKnife.bind(this);
 
+        params = (DemoInfo.Params) getIntent().getSerializableExtra("params");
         init();
     }
 
     private void init() {
+
+
         mAdapter = new MainAdapter(this);
         imageRelatedRv.setLayoutManager(new LinearLayoutManager(this));
         imageRelatedRv.setAdapter(mAdapter);
-        mAdapter.setDatas(DemoInfo.images);
+        if (params != null) {
+            if (params.type == DemoInfo.Params.IMAGE_TYPE) {
+                mAdapter.setDatas(DemoInfo.images);
+            } else if (params.type == DemoInfo.Params.CUSTOM_VIEW_TYPE) {
+                mAdapter.setDatas(DemoInfo.customView);
+            }
+        } else {
+            mAdapter.setDatas(DemoInfo.images);
+        }
 
     }
 }

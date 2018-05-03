@@ -47,11 +47,16 @@ public class MainAdapter extends RecyclerView.Adapter {
         ViewHolder viewHolder = (ViewHolder) holder;
         viewHolder.title.setText(datas[position].title);
 
-        final int  pos = position;
+        final int pos = position;
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, datas[pos].actitity);
+
+                if (datas[pos].bundle != null) {
+                    intent.putExtra("params", datas[pos].bundle);
+                }
+
                 mContext.startActivity(intent);
             }
         });

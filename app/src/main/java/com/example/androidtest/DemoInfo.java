@@ -18,8 +18,6 @@ import com.example.androidtest.activity.ImageCacheActivity;
 import com.example.androidtest.activity.ImagePixelActivity;
 import com.example.androidtest.activity.ImageTranspaencyActivity;
 import com.example.androidtest.activity.IntentTestActivity;
-import com.example.androidtest.activity.launch.FlagIntentActivity;
-import com.example.androidtest.activity.launch.LaunchStandardActivity;
 import com.example.androidtest.activity.LifecycleTestActivity;
 import com.example.androidtest.activity.MyListActivity;
 import com.example.androidtest.activity.PitChartActivity;
@@ -36,6 +34,9 @@ import com.example.androidtest.activity.TransparentActivity;
 import com.example.androidtest.activity.VideoViewActivity;
 import com.example.androidtest.activity.VolleyActivity;
 import com.example.androidtest.activity.ZoomImageActivity;
+import com.example.androidtest.activity.launch.FlagIntentActivity;
+import com.example.androidtest.activity.launch.LaunchStandardActivity;
+import com.example.androidtest.activity.view.CustomLLActivity;
 import com.example.androidtest.animate.AnimationListActivity;
 import com.example.androidtest.charge.ChargeActivity;
 import com.example.androidtest.display.DisplayActivity;
@@ -47,22 +48,64 @@ import com.example.androidtest.material.MaterialActivity;
 import com.example.androidtest.storage.SharePreferenceActivity;
 import com.example.androidtest.viewpager.BackGroundColorAnimationActivity;
 
+import java.io.Serializable;
+
 
 public class DemoInfo {
     public final String title;
     public final Class<? extends Activity> actitity;
+    public final Params bundle;
 
     public DemoInfo(String title, Class<? extends Activity> activity) {
         this.title = title;
         this.actitity = activity;
+        this.bundle = null;
+    }
+
+    public DemoInfo(String title, Class<? extends Activity> activity, Params bundle) {
+        this.title = title;
+        this.bundle = bundle;
+        this.actitity = activity;
+    }
+
+
+    public static final DemoInfo[] images = {
+            new DemoInfo("Scrolling2Activity", Scrolling2Activity.class),
+            new DemoInfo("DpiTest", DpiTestActivity.class),
+            new DemoInfo("Image透明", ImageTranspaencyActivity.class),
+            new DemoInfo("ImageView像素测试", ImagePixelActivity.class),
+            new DemoInfo("图片缩放", ZoomImageActivity.class),
+            new DemoInfo("图片缓存", ImageCacheActivity.class),
+    };
+
+    public static final Params imagesBundle = new Params(Params.IMAGE_TYPE);
+    public static final DemoInfo[] customView = {
+            new DemoInfo("CustomeLinearLayout", CustomLLActivity.class)
+    };
+
+
+    public static final Params customViewBundle = new Params(Params.CUSTOM_VIEW_TYPE);
+
+
+    public static class Params implements Serializable {
+
+        public static final int IMAGE_TYPE = 1;
+        public static final int CUSTOM_VIEW_TYPE = 2;
+        public final int type;
+
+        public Params(int type) {
+            this.type = type;
+        }
     }
 
     public static final DemoInfo[] demo = {
 
             new DemoInfo("动画", AnimationListActivity.class),
+            new DemoInfo("test",TestActivity.class),
+            new DemoInfo("CustomView", MyListActivity.class, customViewBundle),
             new DemoInfo("Activity启动模式", LaunchStandardActivity.class),
             new DemoInfo("Activity启动模式Flag", FlagIntentActivity.class),
-            new DemoInfo("Image相关", MyListActivity.class),
+            new DemoInfo("Image相关", MyListActivity.class, imagesBundle),
             new DemoInfo("Zaker风格欢迎界面测试", TestZakerActivity.class),
             new DemoInfo("ViewPager全屏背景渐变",
                     BackGroundColorAnimationActivity.class),
@@ -102,14 +145,5 @@ public class DemoInfo {
             new DemoInfo("PieChart", PitChartActivity.class),
             new DemoInfo("CustomView", CustomViewActivity.class),
 
-    };
-
-    public static final DemoInfo[] images = {
-            new DemoInfo("Scrolling2Activity", Scrolling2Activity.class),
-            new DemoInfo("DpiTest", DpiTestActivity.class),
-            new DemoInfo("Image透明", ImageTranspaencyActivity.class),
-            new DemoInfo("ImageView像素测试", ImagePixelActivity.class),
-            new DemoInfo("图片缩放", ZoomImageActivity.class),
-            new DemoInfo("图片缓存", ImageCacheActivity.class),
     };
 }

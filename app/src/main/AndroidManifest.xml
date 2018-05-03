@@ -227,8 +227,10 @@
             <activity android:name="com.hook.HookActivity"
             android:screenOrientation="portrait"></activity>
         -->
-        <activity android:name=".activity.launch.FlagIntentActivity"></activity>
-        <activity android:name=".activity.launch.FlagIntentActivity2"></activity>
+        <activity android:name=".activity.launch.FlagIntentActivity" />
+        <activity android:name=".activity.launch.FlagIntentActivity2" />
+        <activity android:name=".activity.view.CustomLLActivity" />
+        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>

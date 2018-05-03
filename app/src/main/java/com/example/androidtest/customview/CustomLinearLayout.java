@@ -7,6 +7,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 
 public class CustomLinearLayout extends ViewGroup {
@@ -31,9 +32,11 @@ public class CustomLinearLayout extends ViewGroup {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
-        setMeasuredDimension(100, 100);
+//        setMeasuredDimension(100, 100);
 
         LinearLayout  ll;
+
+        RelativeLayout relativeLayout;
     }
 
     @Override
